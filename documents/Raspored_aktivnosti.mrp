@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<company>
+  <version>4.0.7</version>
+  <type>2</type>
+  <company-timezone>Europe/Belgrade</company-timezone>
+  <creation-time>1763591111569</creation-time>
+  <company-tax-rate>0.0</company-tax-rate>
+  <company-calendar-id>0</company-calendar-id>
+  <task-field-list/>
+  <resource-field-list/>
+  <client-field-list/>
+  <calendar-list>
+    <calendar>
+      <calendar-type>standard</calendar-type>
+      <calendar-name>Standard</calendar-name>
+      <calendar-id>0</calendar-id>
+      <week-pattern-list>
+        <pattern day-in-week="1">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="2">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="3">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="4">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="5">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="6">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="7">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>57600000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>57600000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+      </week-pattern-list>
+      <special-pattern-list/>
+    </calendar>
+  </calendar-list>
+  <resource-list>
+    <human-resource-list>
+      <resource>
+        <resource-id>1</resource-id>
+        <resource-name>Aldina Avdic</resource-name>
+        <rate-list>
+          <rate>
+            <rate-id>3</rate-id>
+            <rate-name>Rate 1</rate-name>
+            <rate-std-rate>0.0</rate-std-rate>
+            <rate-ovt-rate>0.0</rate-ovt-rate>
+          </rate>
+        </rate-list>
+        <default-rate>3</default-rate>
+        <resource-max-unit>1.0</resource-max-unit>
+        <resource-type>h</resource-type>
+        <resource-calendar-id>0</resource-calendar-id>
+      </resource>
+      <resource>
+        <resource-id>2</resource-id>
+        <resource-name>Ajsa Besirovic</resource-name>
+        <rate-list>
+          <rate>
+            <rate-id>4</rate-id>
+            <rate-name>Rate 1</rate-name>
+            <rate-std-rate>0.0</rate-std-rate>
+            <rate-ovt-rate>0.0</rate-ovt-rate>
+          </rate>
+        </rate-list>
+        <default-rate>4</default-rate>
+        <resource-max-unit>1.0</resource-max-unit>
+        <resource-type>h</resource-type>
+        <resource-calendar-id>0</resource-calendar-id>
+      </resource>
+    </human-resource-list>
+    <material-resource-list/>
+    <cost-resource-list/>
+  </resource-list>
+  <client-list/>
+  <task>
+    <project>true</project>
+    <pattern>
+      <period-in-day>
+        <period-type>false</period-type>
+        <period-start-date>0</period-start-date>
+        <period-end-date>28800000</period-end-date>
+      </period-in-day>
+      <period-in-day>
+        <period-type>true</period-type>
+        <period-start-date>28800000</period-start-date>
+        <period-end-date>43200000</period-end-date>
+      </period-in-day>
+      <period-in-day>
+        <period-type>false</period-type>
+        <period-start-date>43200000</period-start-date>
+        <period-end-date>86400000</period-end-date>
+      </period-in-day>
+    </pattern>
+    <default-forced-working>false</default-forced-working>
+    <default-work-driven>false</default-work-driven>
+    <default-fixed-units>true</default-fixed-units>
+    <task-status>In progress</task-status>
+    <project-manager/>
+    <project-code/>
+    <project-budget>0.0</project-budget>
+    <project-description/>
+    <project-assumptions/>
+    <project-constraints/>
+    <project-baseline-list/>
+    <project-critical-slack-limit>0</project-critical-slack-limit>
+    <project-critical-slack-unit>d</project-critical-slack-unit>
+    <units-duration>
+      <default-unit>d</default-unit>
+      <default-work-unit>h</default-work-unit>
+      <y>6912000000</y>
+      <mo>576000000</mo>
+      <w>144000000</w>
+      <d>28800000</d>
+      <h>3600000</h>
+      <m>60000</m>
+      <s>1000</s>
+    </units-duration>
+    <task-name>All projects</task-name>
+    <task-id>0</task-id>
+    <expanded-gantt>true</expanded-gantt>
+    <task-currency-unit>$</task-currency-unit>
+    <task-constraint>
+      <snet>19-11-2025, 08:00:00</snet>
+    </task-constraint>
+    <task-start-date>06-11-2025, 16:00:00</task-start-date>
+    <task-end-date>21-01-2026, 20:00:00</task-end-date>
+    <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+    <task-duration>1108800000</task-duration>
+    <task-list>
+      <task>
+        <project>true</project>
+        <pattern>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <default-forced-working>false</default-forced-working>
+        <default-work-driven>true</default-work-driven>
+        <default-fixed-units>true</default-fixed-units>
+        <task-status>In progress</task-status>
+        <project-manager/>
+        <project-code/>
+        <project-budget>0.0</project-budget>
+        <project-description/>
+        <project-assumptions/>
+        <project-constraints/>
+        <project-baseline-list>
+          <project-baseline>
+            <no>0</no>
+          </project-baseline>
+        </project-baseline-list>
+        <project-critical-slack-limit>0</project-critical-slack-limit>
+        <project-critical-slack-unit>d</project-critical-slack-unit>
+        <units-duration>
+          <default-unit>d</default-unit>
+          <default-work-unit>h</default-work-unit>
+          <y>6912000000</y>
+          <mo>432000000</mo>
+          <w>100800000</w>
+          <d>14400000</d>
+          <h>3600000</h>
+          <m>60000</m>
+          <s>1000</s>
+        </units-duration>
+        <task-name>GenHub – Planirani raspored aktivnosti</task-name>
+        <task-id>1</task-id>
+        <expanded-gantt>true</expanded-gantt>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-end</task-accrual>
+        <task-constraint>
+          <snet>19-03-2007, 08:00:00</snet>
+        </task-constraint>
+        <task-start-date>06-11-2025, 16:00:00</task-start-date>
+        <task-end-date>21-01-2026, 20:00:00</task-end-date>
+        <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+        <task-duration>1108800000</task-duration>
+        <baseline-list>
+          <baseline>
+            <baseline-no>0</baseline-no>
+            <baseline-start>11-06-1998, 08:00:00</baseline-start>
+            <baseline-end>19-10-1998, 17:00:00</baseline-end>
+            <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+            <baseline-completion>0.0</baseline-completion>
+          </baseline>
+        </baseline-list>
+        <task-list>
+          <task>
+            <task-name>Očekivani rezultati</task-name>
+            <task-id>2</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-accrual>accrual-end</task-accrual>
+            <task-start-date>06-11-2025, 16:00:00</task-start-date>
+            <task-end-date>21-01-2026, 20:00:00</task-end-date>
+            <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+            <task-duration>1108800000</task-duration>
+            <baseline-list>
+              <baseline>
+                <baseline-no>0</baseline-no>
+                <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                <baseline-end>19-10-1998, 17:00:00</baseline-end>
+                <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                <baseline-completion>0.0</baseline-completion>
+              </baseline>
+            </baseline-list>
+            <task-list>
+              <task>
+                <task-name>Početak projekta</task-name>
+                <task-id>3</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>06-11-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>06-11-2025, 16:00:00</task-start-date>
+                <task-end-date>06-11-2025, 16:00:00</task-end-date>
+                <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                    <baseline-end>11-06-1998, 08:00:00</baseline-end>
+                    <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+              </task>
+              <task>
+                <task-name>Vizija sistema</task-name>
+                <task-id>4</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>12-11-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>12-11-2025, 20:00:00</task-start-date>
+                <task-end-date>12-11-2025, 20:00:00</task-end-date>
+                <task-completion-date>12-11-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+                <task-fixed-units>false</task-fixed-units>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>17-06-1998, 17:00:00</baseline-start>
+                    <baseline-end>17-06-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>17-06-1998, 17:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+              </task>
+              <task>
+                <task-name>Dokument o zahtevima</task-name>
+                <task-id>5</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>26-11-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>26-11-2025, 20:00:00</task-start-date>
+                <task-end-date>26-11-2025, 20:00:00</task-end-date>
+                <task-completion-date>26-11-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Arhitekturni prototip</task-name>
+                <task-id>6</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>29-11-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>29-11-2025, 20:00:00</task-start-date>
+                <task-end-date>29-11-2025, 20:00:00</task-end-date>
+                <task-completion-date>29-11-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Prototip korisničkog interfejsa</task-name>
+                <task-id>7</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>03-12-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>03-12-2025, 20:00:00</task-start-date>
+                <task-end-date>03-12-2025, 20:00:00</task-end-date>
+                <task-completion-date>03-12-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Arhitekturni projekat</task-name>
+                <task-id>8</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>10-12-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>10-12-2025, 20:00:00</task-start-date>
+                <task-end-date>10-12-2025, 20:00:00</task-end-date>
+                <task-completion-date>10-12-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>20-08-1998, 17:00:00</baseline-start>
+                    <baseline-end>20-08-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>20-08-1998, 17:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+              </task>
+              <task>
+                <task-name>Detaljni projekat</task-name>
+                <task-id>9</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>24-12-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>24-12-2025, 20:00:00</task-start-date>
+                <task-end-date>24-12-2025, 20:00:00</task-end-date>
+                <task-completion-date>24-12-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+                <task-fixed-units>false</task-fixed-units>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>06-10-1998, 17:00:00</baseline-start>
+                    <baseline-end>06-10-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>06-10-1998, 17:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+              </task>
+              <task>
+                <task-name>Beta verzija</task-name>
+                <task-id>10</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>27-12-2025, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>27-12-2025, 20:00:00</task-start-date>
+                <task-end-date>27-12-2025, 20:00:00</task-end-date>
+                <task-completion-date>27-12-2025, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>19-10-1998, 17:00:00</baseline-start>
+                    <baseline-end>19-10-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>19-10-1998, 17:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+              </task>
+              <task>
+                <task-name>Plan testiranja</task-name>
+                <task-id>11</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>01-01-2026, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>01-01-2026, 16:00:00</task-start-date>
+                <task-end-date>01-01-2026, 16:00:00</task-end-date>
+                <task-completion-date>01-01-2026, 16:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Izveštaj o testiranju</task-name>
+                <task-id>12</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>07-01-2026, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>07-01-2026, 20:00:00</task-start-date>
+                <task-end-date>07-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>07-01-2026, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Konačna verzija</task-name>
+                <task-id>13</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>07-01-2026, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>07-01-2026, 20:00:00</task-start-date>
+                <task-end-date>07-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>07-01-2026, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Korisničko uputstvo</task-name>
+                <task-id>14</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>20-01-2026, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>20-01-2026, 20:00:00</task-start-date>
+                <task-end-date>20-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>20-01-2026, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+              <task>
+                <task-name>Prezentacija proizvoda</task-name>
+                <task-id>15</task-id>
+                <task-accrual>accrual-end</task-accrual>
+                <task-constraint>
+                  <snet>21-01-2026, 16:00:00</snet>
+                </task-constraint>
+                <task-start-date>21-01-2026, 20:00:00</task-start-date>
+                <task-end-date>21-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>21-01-2026, 20:00:00</task-completion-date>
+                <task-duration>0</task-duration>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>16</task-id>
+          </empty-task>
+          <task>
+            <task-name>Faza planiranja projekta</task-name>
+            <task-id>17</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-accrual>accrual-end</task-accrual>
+            <task-start-date>06-11-2025, 16:00:00</task-start-date>
+            <task-end-date>19-11-2025, 20:00:00</task-end-date>
+            <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+            <task-duration>201600000</task-duration>
+            <baseline-list>
+              <baseline>
+                <baseline-no>0</baseline-no>
+                <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                <baseline-end>17-06-1998, 17:00:00</baseline-end>
+                <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                <baseline-completion>0.0</baseline-completion>
+              </baseline>
+            </baseline-list>
+            <task-list>
+              <task>
+                <task-name>Preliminarna iteracija</task-name>
+                <task-id>18</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-accrual>accrual-end</task-accrual>
+                <task-start-date>06-11-2025, 16:00:00</task-start-date>
+                <task-end-date>19-11-2025, 20:00:00</task-end-date>
+                <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+                <task-duration>201600000</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                    <baseline-end>17-06-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+                <task-list>
+                  <task>
+                    <task-name>Definisanje zahteva</task-name>
+                    <task-id>19</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-constraint>
+                      <snet>06-11-2025, 16:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>06-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>08-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>43200000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>15-06-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Izrada vizije sistema</task-name>
+                    <task-id>20</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>09-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>12-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>09-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>57600000</task-duration>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>17-06-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Modelovanje domena</task-name>
+                    <task-id>21</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>13-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>13-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>13-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>14400000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>11-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>17-06-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>11-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Analiza slučajeva korišćenja</task-name>
+                    <task-id>22</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>14-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>19-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>14-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>86400000</task-duration>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>19-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>23-06-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>19-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>23</task-id>
+          </empty-task>
+          <task>
+            <task-name>Faza razrade projekta</task-name>
+            <task-id>24</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-accrual>accrual-end</task-accrual>
+            <task-start-date>20-11-2025, 16:00:00</task-start-date>
+            <task-end-date>10-12-2025, 20:00:00</task-end-date>
+            <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
+            <task-duration>302400000</task-duration>
+            <baseline-list>
+              <baseline>
+                <baseline-no>0</baseline-no>
+                <baseline-start>18-06-1998, 08:00:00</baseline-start>
+                <baseline-end>20-08-1998, 17:00:00</baseline-end>
+                <baseline-completion-date>18-06-1998, 08:00:00</baseline-completion-date>
+                <baseline-completion>0.0</baseline-completion>
+              </baseline>
+            </baseline-list>
+            <task-list>
+              <task>
+                <task-name>Iteracija R1 - Razvoj arhitekturnog prototipa</task-name>
+                <task-id>25</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-accrual>accrual-end</task-accrual>
+                <task-start-date>20-11-2025, 16:00:00</task-start-date>
+                <task-end-date>10-12-2025, 20:00:00</task-end-date>
+                <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
+                <task-duration>302400000</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>18-06-1998, 08:00:00</baseline-start>
+                    <baseline-end>20-07-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>18-06-1998, 08:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+                <task-list>
+                  <task>
+                    <task-name>Izrada dokumenta o zahtevima</task-name>
+                    <task-id>26</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>20-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>26-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>100800000</task-duration>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>19-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>25-06-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>19-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Implementacija arhitekturnog prototipa</task-name>
+                    <task-id>27</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>20-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>29-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>144000000</task-duration>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>01-07-1998, 08:00:00</baseline-start>
+                        <baseline-end>10-07-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>01-07-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Testiranje arhitekture</task-name>
+                    <task-id>28</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>30-11-2025, 16:00:00</task-start-date>
+                    <task-end-date>30-11-2025, 20:00:00</task-end-date>
+                    <task-completion-date>30-11-2025, 16:00:00</task-completion-date>
+                    <task-duration>14400000</task-duration>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>08-07-1998, 08:00:00</baseline-start>
+                        <baseline-end>16-07-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>08-07-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Implementacija prototipa korisničkog interfejsa</task-name>
+                    <task-id>29</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>01-12-2025, 16:00:00</task-start-date>
+                    <task-end-date>03-12-2025, 20:00:00</task-end-date>
+                    <task-completion-date>01-12-2025, 16:00:00</task-completion-date>
+                    <task-duration>43200000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>18-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>20-07-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>18-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Izrada arhitekturnog projekta</task-name>
+                    <task-id>30</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>04-12-2025, 16:00:00</task-start-date>
+                    <task-end-date>10-12-2025, 20:00:00</task-end-date>
+                    <task-completion-date>04-12-2025, 16:00:00</task-completion-date>
+                    <task-duration>100800000</task-duration>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>23-06-1998, 08:00:00</baseline-start>
+                        <baseline-end>06-07-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>23-06-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>31</task-id>
+          </empty-task>
+          <task>
+            <task-name>Faza izrade projekta</task-name>
+            <task-id>32</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-accrual>accrual-end</task-accrual>
+            <task-start-date>11-12-2025, 16:00:00</task-start-date>
+            <task-end-date>07-01-2026, 20:00:00</task-end-date>
+            <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
+            <task-duration>403200000</task-duration>
+            <baseline-list>
+              <baseline>
+                <baseline-no>0</baseline-no>
+                <baseline-start>21-08-1998, 08:00:00</baseline-start>
+                <baseline-end>06-10-1998, 17:00:00</baseline-end>
+                <baseline-completion-date>21-08-1998, 08:00:00</baseline-completion-date>
+                <baseline-completion>0.0</baseline-completion>
+              </baseline>
+            </baseline-list>
+            <task-list>
+              <task>
+                <task-name>Iteracija I1 - Razvoj beta verzije</task-name>
+                <task-id>33</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-accrual>accrual-end</task-accrual>
+                <task-start-date>11-12-2025, 16:00:00</task-start-date>
+                <task-end-date>02-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
+                <task-duration>331200000</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>21-08-1998, 08:00:00</baseline-start>
+                    <baseline-end>04-09-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>21-08-1998, 08:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+                <task-list>
+                  <task>
+                    <task-name>Izrada detaljnog projekta</task-name>
+                    <task-id>34</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>11-12-2025, 16:00:00</task-start-date>
+                    <task-end-date>24-12-2025, 20:00:00</task-end-date>
+                    <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
+                    <task-duration>201600000</task-duration>
+                  </task>
+                  <task>
+                    <task-name>Implementacija beta verzije</task-name>
+                    <task-id>35</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>11-12-2025, 16:00:00</task-start-date>
+                    <task-end-date>27-12-2025, 20:00:00</task-end-date>
+                    <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
+                    <task-duration>244800000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>24-08-1998, 08:00:00</baseline-start>
+                        <baseline-end>31-08-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>24-08-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Izrada plana testiranja</task-name>
+                    <task-id>36</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>28-12-2025, 16:00:00</task-start-date>
+                    <task-end-date>31-12-2025, 20:00:00</task-end-date>
+                    <task-completion-date>28-12-2025, 16:00:00</task-completion-date>
+                    <task-duration>57600000</task-duration>
+                  </task>
+                  <task>
+                    <task-name>Testiranje sistema</task-name>
+                    <task-id>37</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>01-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>02-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>01-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>24-08-1998, 08:00:00</baseline-start>
+                        <baseline-end>02-09-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>24-08-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Izrada izveštaja o testiranju</task-name>
+                    <task-id>38</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>01-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>02-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>01-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>21-08-1998, 08:00:00</baseline-start>
+                        <baseline-end>04-09-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>21-08-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>Iteracija I2 - Razvoj konačne verzije</task-name>
+                <task-id>39</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <recurrent-task>true</recurrent-task>
+                <task-accrual>accrual-end</task-accrual>
+                <task-start-date>03-01-2026, 16:00:00</task-start-date>
+                <task-end-date>07-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>03-01-2026, 16:00:00</task-completion-date>
+                <task-duration>72000000</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>07-09-1998, 08:00:00</baseline-start>
+                    <baseline-end>21-09-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>07-09-1998, 08:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+                <task-list>
+                  <task>
+                    <task-name>Implementacija konačne verzije</task-name>
+                    <task-id>40</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>03-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>06-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>03-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>57600000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>08-09-1998, 08:00:00</baseline-start>
+                        <baseline-end>15-09-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>08-09-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Testiranje konačne verzije</task-name>
+                    <task-id>41</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>07-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>07-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>07-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>14400000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>08-09-1998, 08:00:00</baseline-start>
+                        <baseline-end>17-09-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>08-09-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Ažuriranje izveštaja o testiranju</task-name>
+                    <task-id>42</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>07-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>07-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>07-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>14400000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>07-09-1998, 08:00:00</baseline-start>
+                        <baseline-end>21-09-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>07-09-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>43</task-id>
+          </empty-task>
+          <task>
+            <task-name>Faza okončanja projekta</task-name>
+            <task-id>44</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-accrual>accrual-end</task-accrual>
+            <task-start-date>08-01-2026, 16:00:00</task-start-date>
+            <task-end-date>21-01-2026, 20:00:00</task-end-date>
+            <task-completion-date>08-01-2026, 16:00:00</task-completion-date>
+            <task-duration>201600000</task-duration>
+            <baseline-list>
+              <baseline>
+                <baseline-no>0</baseline-no>
+                <baseline-start>07-10-1998, 08:00:00</baseline-start>
+                <baseline-end>19-10-1998, 17:00:00</baseline-end>
+                <baseline-completion-date>07-10-1998, 08:00:00</baseline-completion-date>
+                <baseline-completion>0.0</baseline-completion>
+              </baseline>
+            </baseline-list>
+            <task-list>
+              <task>
+                <task-name>Iteracija O1 - Instalacija sistema</task-name>
+                <task-id>45</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <recurrent-task>true</recurrent-task>
+                <task-accrual>accrual-end</task-accrual>
+                <task-start-date>08-01-2026, 16:00:00</task-start-date>
+                <task-end-date>21-01-2026, 20:00:00</task-end-date>
+                <task-completion-date>08-01-2026, 16:00:00</task-completion-date>
+                <task-duration>201600000</task-duration>
+                <baseline-list>
+                  <baseline>
+                    <baseline-no>0</baseline-no>
+                    <baseline-start>07-10-1998, 08:00:00</baseline-start>
+                    <baseline-end>19-10-1998, 17:00:00</baseline-end>
+                    <baseline-completion-date>07-10-1998, 08:00:00</baseline-completion-date>
+                    <baseline-completion>0.0</baseline-completion>
+                  </baseline>
+                </baseline-list>
+                <task-list>
+                  <task>
+                    <task-name>Sređivanje projektne dokumentacije</task-name>
+                    <task-id>46</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>08-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>14-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>08-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>100800000</task-duration>
+                  </task>
+                  <task>
+                    <task-name>Izrada korisničkog uputstva</task-name>
+                    <task-id>47</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>15-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>20-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>15-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>86400000</task-duration>
+                    <task-fixed-units>false</task-fixed-units>
+                    <baseline-list>
+                      <baseline>
+                        <baseline-no>0</baseline-no>
+                        <baseline-start>07-10-1998, 08:00:00</baseline-start>
+                        <baseline-end>19-10-1998, 17:00:00</baseline-end>
+                        <baseline-completion-date>07-10-1998, 08:00:00</baseline-completion-date>
+                        <baseline-completion>0.0</baseline-completion>
+                      </baseline>
+                    </baseline-list>
+                  </task>
+                  <task>
+                    <task-name>Instalacija sistema</task-name>
+                    <task-id>48</task-id>
+                    <task-accrual>accrual-end</task-accrual>
+                    <task-start-date>21-01-2026, 16:00:00</task-start-date>
+                    <task-end-date>21-01-2026, 20:00:00</task-end-date>
+                    <task-completion-date>21-01-2026, 16:00:00</task-completion-date>
+                    <task-duration>14400000</task-duration>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+        </task-list>
+      </task>
+    </task-list>
+  </task>
+  <company-current-project>1</company-current-project>
+  <task-dependency-list>
+    <task-dependency>
+      <task-predecessor-id>17</task-predecessor-id>
+      <task-successor-id>3</task-successor-id>
+      <dependency-type>start-to-start</dependency-type>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>20</task-predecessor-id>
+      <task-successor-id>4</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>26</task-predecessor-id>
+      <task-successor-id>5</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>27</task-predecessor-id>
+      <task-successor-id>6</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>29</task-predecessor-id>
+      <task-successor-id>7</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>30</task-predecessor-id>
+      <task-successor-id>8</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>34</task-predecessor-id>
+      <task-successor-id>9</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>35</task-predecessor-id>
+      <task-successor-id>10</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>36</task-predecessor-id>
+      <task-successor-id>11</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>42</task-predecessor-id>
+      <task-successor-id>12</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>39</task-predecessor-id>
+      <task-successor-id>13</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>47</task-predecessor-id>
+      <task-successor-id>14</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>45</task-predecessor-id>
+      <task-successor-id>15</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>19</task-predecessor-id>
+      <task-successor-id>20</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>20</task-predecessor-id>
+      <task-successor-id>21</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>21</task-predecessor-id>
+      <task-successor-id>22</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>17</task-predecessor-id>
+      <task-successor-id>24</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>27</task-predecessor-id>
+      <task-successor-id>28</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>28</task-predecessor-id>
+      <task-successor-id>29</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>29</task-predecessor-id>
+      <task-successor-id>30</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>24</task-predecessor-id>
+      <task-successor-id>32</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>35</task-predecessor-id>
+      <task-successor-id>36</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>36</task-predecessor-id>
+      <task-successor-id>37</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>36</task-predecessor-id>
+      <task-successor-id>38</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>33</task-predecessor-id>
+      <task-successor-id>39</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>40</task-predecessor-id>
+      <task-successor-id>41</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>40</task-predecessor-id>
+      <task-successor-id>42</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>39</task-predecessor-id>
+      <task-successor-id>44</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>46</task-predecessor-id>
+      <task-successor-id>47</task-successor-id>
+    </task-dependency>
+    <task-dependency>
+      <task-predecessor-id>47</task-predecessor-id>
+      <task-successor-id>48</task-successor-id>
+    </task-dependency>
+  </task-dependency-list>
+  <conflict-list/>
+  <assignment-list/>
+</company>
