@@ -345,6 +345,7 @@
             <task-end-date>21-01-2026, 20:00:00</task-end-date>
             <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
             <task-duration>1108800000</task-duration>
+            <task-work-duration>2217600000</task-work-duration>
             <baseline-list>
               <baseline>
                 <baseline-no>0</baseline-no>
@@ -572,6 +573,7 @@
             <task-end-date>19-11-2025, 20:00:00</task-end-date>
             <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
             <task-duration>201600000</task-duration>
+            <task-work-duration>201600000</task-work-duration>
             <baseline-list>
               <baseline>
                 <baseline-no>0</baseline-no>
@@ -591,6 +593,7 @@
                 <task-end-date>19-11-2025, 20:00:00</task-end-date>
                 <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
                 <task-duration>201600000</task-duration>
+                <task-work-duration>201600000</task-work-duration>
                 <baseline-list>
                   <baseline>
                     <baseline-no>0</baseline-no>
@@ -613,6 +616,7 @@
                     <task-completion-date>06-11-2025, 16:00:00</task-completion-date>
                     <task-duration>43200000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>43200000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -631,6 +635,7 @@
                     <task-end-date>12-11-2025, 20:00:00</task-end-date>
                     <task-completion-date>09-11-2025, 16:00:00</task-completion-date>
                     <task-duration>57600000</task-duration>
+                    <task-work-duration>57600000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -650,6 +655,7 @@
                     <task-completion-date>13-11-2025, 16:00:00</task-completion-date>
                     <task-duration>14400000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>28800000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -668,6 +674,7 @@
                     <task-end-date>19-11-2025, 20:00:00</task-end-date>
                     <task-completion-date>14-11-2025, 16:00:00</task-completion-date>
                     <task-duration>86400000</task-duration>
+                    <task-work-duration>86400000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -694,6 +701,7 @@
             <task-end-date>10-12-2025, 20:00:00</task-end-date>
             <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
             <task-duration>302400000</task-duration>
+            <task-work-duration>302400000</task-work-duration>
             <baseline-list>
               <baseline>
                 <baseline-no>0</baseline-no>
@@ -713,6 +721,7 @@
                 <task-end-date>10-12-2025, 20:00:00</task-end-date>
                 <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
                 <task-duration>302400000</task-duration>
+                <task-work-duration>302400000</task-work-duration>
                 <baseline-list>
                   <baseline>
                     <baseline-no>0</baseline-no>
@@ -731,6 +740,7 @@
                     <task-end-date>26-11-2025, 20:00:00</task-end-date>
                     <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
                     <task-duration>100800000</task-duration>
+                    <task-work-duration>100800000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -749,6 +759,7 @@
                     <task-end-date>29-11-2025, 20:00:00</task-end-date>
                     <task-completion-date>20-11-2025, 16:00:00</task-completion-date>
                     <task-duration>144000000</task-duration>
+                    <task-work-duration>144000000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -767,6 +778,7 @@
                     <task-end-date>30-11-2025, 20:00:00</task-end-date>
                     <task-completion-date>30-11-2025, 16:00:00</task-completion-date>
                     <task-duration>14400000</task-duration>
+                    <task-work-duration>14400000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -786,6 +798,7 @@
                     <task-completion-date>01-12-2025, 16:00:00</task-completion-date>
                     <task-duration>43200000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>43200000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -804,6 +817,7 @@
                     <task-end-date>10-12-2025, 20:00:00</task-end-date>
                     <task-completion-date>04-12-2025, 16:00:00</task-completion-date>
                     <task-duration>100800000</task-duration>
+                    <task-work-duration>100800000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -830,6 +844,7 @@
             <task-end-date>07-01-2026, 20:00:00</task-end-date>
             <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
             <task-duration>403200000</task-duration>
+            <task-work-duration>403200000</task-work-duration>
             <baseline-list>
               <baseline>
                 <baseline-no>0</baseline-no>
@@ -849,6 +864,7 @@
                 <task-end-date>02-01-2026, 20:00:00</task-end-date>
                 <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
                 <task-duration>331200000</task-duration>
+                <task-work-duration>331200000</task-work-duration>
                 <baseline-list>
                   <baseline>
                     <baseline-no>0</baseline-no>
@@ -867,6 +883,7 @@
                     <task-end-date>24-12-2025, 20:00:00</task-end-date>
                     <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
                     <task-duration>201600000</task-duration>
+                    <task-work-duration>201600000</task-work-duration>
                   </task>
                   <task>
                     <task-name>Implementacija beta verzije</task-name>
@@ -877,6 +894,7 @@
                     <task-completion-date>11-12-2025, 16:00:00</task-completion-date>
                     <task-duration>244800000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>244800000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -895,6 +913,7 @@
                     <task-end-date>31-12-2025, 20:00:00</task-end-date>
                     <task-completion-date>28-12-2025, 16:00:00</task-completion-date>
                     <task-duration>57600000</task-duration>
+                    <task-work-duration>57600000</task-work-duration>
                   </task>
                   <task>
                     <task-name>Testiranje sistema</task-name>
@@ -905,6 +924,7 @@
                     <task-completion-date>01-01-2026, 16:00:00</task-completion-date>
                     <task-duration>28800000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>28800000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -924,6 +944,7 @@
                     <task-completion-date>01-01-2026, 16:00:00</task-completion-date>
                     <task-duration>28800000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>28800000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -946,6 +967,7 @@
                 <task-end-date>07-01-2026, 20:00:00</task-end-date>
                 <task-completion-date>03-01-2026, 16:00:00</task-completion-date>
                 <task-duration>72000000</task-duration>
+                <task-work-duration>72000000</task-work-duration>
                 <baseline-list>
                   <baseline>
                     <baseline-no>0</baseline-no>
@@ -965,6 +987,7 @@
                     <task-completion-date>03-01-2026, 16:00:00</task-completion-date>
                     <task-duration>57600000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>57600000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -984,6 +1007,7 @@
                     <task-completion-date>07-01-2026, 16:00:00</task-completion-date>
                     <task-duration>14400000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>14400000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -1003,6 +1027,7 @@
                     <task-completion-date>07-01-2026, 16:00:00</task-completion-date>
                     <task-duration>14400000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>14400000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -1029,6 +1054,7 @@
             <task-end-date>21-01-2026, 20:00:00</task-end-date>
             <task-completion-date>08-01-2026, 16:00:00</task-completion-date>
             <task-duration>201600000</task-duration>
+            <task-work-duration>201600000</task-work-duration>
             <baseline-list>
               <baseline>
                 <baseline-no>0</baseline-no>
@@ -1049,6 +1075,7 @@
                 <task-end-date>21-01-2026, 20:00:00</task-end-date>
                 <task-completion-date>08-01-2026, 16:00:00</task-completion-date>
                 <task-duration>201600000</task-duration>
+                <task-work-duration>201600000</task-work-duration>
                 <baseline-list>
                   <baseline>
                     <baseline-no>0</baseline-no>
@@ -1067,6 +1094,7 @@
                     <task-end-date>14-01-2026, 20:00:00</task-end-date>
                     <task-completion-date>08-01-2026, 16:00:00</task-completion-date>
                     <task-duration>100800000</task-duration>
+                    <task-work-duration>100800000</task-work-duration>
                   </task>
                   <task>
                     <task-name>Izrada korisničkog uputstva</task-name>
@@ -1077,6 +1105,7 @@
                     <task-completion-date>15-01-2026, 16:00:00</task-completion-date>
                     <task-duration>86400000</task-duration>
                     <task-fixed-units>false</task-fixed-units>
+                    <task-work-duration>86400000</task-work-duration>
                     <baseline-list>
                       <baseline>
                         <baseline-no>0</baseline-no>
@@ -1095,6 +1124,7 @@
                     <task-end-date>21-01-2026, 20:00:00</task-end-date>
                     <task-completion-date>21-01-2026, 16:00:00</task-completion-date>
                     <task-duration>14400000</task-duration>
+                    <task-work-duration>14400000</task-work-duration>
                   </task>
                 </task-list>
               </task>
@@ -1229,5 +1259,422 @@
     </task-dependency>
   </task-dependency-list>
   <conflict-list/>
-  <assignment-list/>
+  <assignment-list>
+    <assignment>
+      <assignment-task-id>2</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>2</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>3</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>3</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>4</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>4</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>6</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>6</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>7</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>7</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>8</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>8</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>9</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>9</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>10</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>10</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>11</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>11</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>12</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>12</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>13</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>13</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>14</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>14</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>15</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>15</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>17</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>17</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>18</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>18</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>19</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>19</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>20</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>20</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>21</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>21</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>22</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>22</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>24</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>24</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>25</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>25</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>26</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>26</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>27</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>27</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>28</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>28</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>29</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>29</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>30</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>30</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>32</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>32</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>33</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>33</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>34</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>34</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>35</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>35</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>36</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>36</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>37</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>37</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>38</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>38</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>39</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>39</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>40</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>40</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>41</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>41</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>42</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>42</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>44</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>44</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>45</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>45</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>46</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>46</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>47</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>47</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>48</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+    <assignment>
+      <assignment-task-id>48</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+      <assignment-units>0.5</assignment-units>
+    </assignment>
+  </assignment-list>
 </company>
