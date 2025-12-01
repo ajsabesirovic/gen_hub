@@ -1,4 +1,5 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { NotificationBell } from "@/components/NotificationBell";
 import { buttonVariants } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { UserDropdown } from "./UserDropdown";
@@ -20,6 +21,7 @@ export default function Navbar() {
           </Link>
           <div className="flex items-center gap-3">
             <ThemeToggle />
+            {isLoading ? null : user && <NotificationBell />}
             {isLoading ? null : user ? (
               <UserDropdown
                 name={
