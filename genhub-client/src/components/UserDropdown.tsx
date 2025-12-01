@@ -49,19 +49,19 @@ export function UserDropdown({ name, email, image }: Props) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem asChild>
-            <Link to="/user/profile">
+            <Link to="/profile">
               <Edit size={16} className="opacity-60" aria-hidden="true" />
               Profile
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
-            <Link to="/user">
+            <Link to="/settings">
               <LayoutDashboardIcon
                 size={16}
                 className="opacity-60"
                 aria-hidden="true"
               />
-              <span>Dashboard</span>
+              <span>Settings</span>
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>

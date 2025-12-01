@@ -15,9 +15,9 @@ export interface BackendErrorResponse {
 }
 
 export interface ParsedErrors {
-  fieldErrors: Record<string, string[]>; // Field name -> array of error messages
-  nonFieldErrors: string[]; // General errors not tied to a specific field
-  genericError: string | null; // Fallback error message
+  fieldErrors: Record<string, string[]>;
+  nonFieldErrors: string[];
+  genericError: string | null;
 }
 
 /**
@@ -29,18 +29,15 @@ export function parseBackendErrors(error: any): ParsedErrors {
   let genericError: string | null = null;
 
   if (!error?.response?.data) {
-    // Network error or no response
     genericError = "Network error. Please check your connection and try again.";
     return { fieldErrors, nonFieldErrors, genericError };
   }
 
   const errorData: BackendErrorResponse = error.response.data;
 
-  // Handle field-specific errors (e.g., { new_password1: ["error1", "error2"] })
   Object.keys(errorData).forEach((key) => {
     const value = errorData[key];
     
-    // Skip generic error fields for now
     if (key === "detail" || key === "message" || key === "error" || key === "non_field_errors") {
       return;
     }
@@ -52,7 +49,6 @@ export function parseBackendErrors(error: any): ParsedErrors {
     }
   });
 
-  // Handle non-field errors
   if (errorData.non_field_errors) {
     if (Array.isArray(errorData.non_field_errors)) {
       nonFieldErrors.push(...errorData.non_field_errors);
@@ -61,7 +57,6 @@ export function parseBackendErrors(error: any): ParsedErrors {
     }
   }
 
-  // Handle generic error messages
   if (errorData.detail) {
     genericError = typeof errorData.detail === "string" ? errorData.detail : String(errorData.detail);
   } else if (errorData.message) {
@@ -70,7 +65,6 @@ export function parseBackendErrors(error: any): ParsedErrors {
     genericError = typeof errorData.error === "string" ? errorData.error : String(errorData.error);
   }
 
-  // If no specific errors found, use a default message
   if (Object.keys(fieldErrors).length === 0 && nonFieldErrors.length === 0 && !genericError) {
     genericError = "An error occurred. Please try again.";
   }

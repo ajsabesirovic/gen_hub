@@ -12,7 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { toast } from "sonner";
-import axiosInstance from "@/lib/axios";
+import { requestPasswordReset } from "@/api/user";
 
 export default function ForgotPasswordForm() {
   const navigate = useNavigate();
@@ -24,9 +24,7 @@ export default function ForgotPasswordForm() {
     setIsPending(true);
 
     try {
-      await axiosInstance.post("/auth/password/reset", JSON.stringify({
-        email,
-      }));
+      await requestPasswordReset({ email });
 
       toast.success("Password reset email sent! Please check your inbox.");
       navigate("/login");

@@ -4,9 +4,9 @@ import AuthLayout from "@/components/AuthLayout";
 import ForgotPasswordForm from "@/components/ForgotPasswordForm";
 
 export default function ForgotPasswordPage() {
-  const { session } = useAuth();
+  const { isAuthenticated } = useAuth();
 
-  if (session) {
+  if (isAuthenticated) {
     return <Navigate to="/" replace />;
   }
 

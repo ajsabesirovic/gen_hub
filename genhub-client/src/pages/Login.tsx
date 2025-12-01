@@ -4,10 +4,10 @@ import AuthLayout from "@/components/AuthLayout";
 import LoginForm from "@/components/LoginForm";
 
 export default function LoginPage() {
-  const { session } = useAuth();
+  const { isAuthenticated } = useAuth();
 
-  if (session) {
-    return <Navigate to="/" replace />;
+  if (isAuthenticated) {
+    return <Navigate to="/profile" replace />;
   }
 
   return (

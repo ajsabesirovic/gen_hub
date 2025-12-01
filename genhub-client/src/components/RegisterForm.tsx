@@ -12,12 +12,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { toast } from "sonner";
-import { useAuth } from "@/contexts/AuthContext";
 import axiosInstance from "@/lib/axios";
 
 export default function RegisterForm() {
   const navigate = useNavigate();
-  const { setAccessToken, setSession } = useAuth();
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -36,24 +34,21 @@ export default function RegisterForm() {
     }
 
     try {
-      const response = await axiosInstance.post("/auth/registration", JSON.stringify({
+      await axiosInstance.post("/auth/registration/", JSON.stringify({
         name,
         username,
         email,
-        password,
+        password1:password,
+        password2:confirmPassword,
       }));
 
-      const { access, user } = response.data;
-
-      setAccessToken(access);
-      setSession({ user });
-
-      toast.success("Account created successfully");
-      navigate("/");
-    } catch (error: any) {
+      toast.success("Registration successful! Please verify your email.");
+      navigate(`/verify-email?email=${encodeURIComponent(email)}`);
+    } catch (error: unknown) {
+      const err = error as { response?: { data?: { message?: string; detail?: string } } };
       const errorMessage =
-        error.response?.data?.message ||
-        error.response?.data?.detail ||
+        err.response?.data?.message ||
+        err.response?.data?.detail ||
         "An error occurred during registration";
       toast.error(errorMessage);
     } finally {

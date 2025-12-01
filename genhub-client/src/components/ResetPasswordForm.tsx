@@ -12,8 +12,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import type { FormEvent } from "react";
 import { toast } from "sonner";
-import axiosInstance from "@/lib/axios";
 import { parseBackendErrors, getFieldError, type ParsedErrors } from "@/lib/error-utils";
+import { confirmPasswordReset } from "@/api/user";
 
 interface ResetPasswordFormProps {
   uid: string;
@@ -94,14 +94,13 @@ export default function ResetPasswordForm({ uid, token }: ResetPasswordFormProps
     setIsPending(true);
 
     try {
-      await axiosInstance.post("/auth/password/reset/confirm", JSON.stringify({
+      await confirmPasswordReset({
         uid,
         token,
         new_password1: password,
         new_password2: confirmPassword,
-      }));
-
-      toast.success("You can now login with your new password.");
+      });
+      toast.success("Password reset successfully.");
       navigate("/login");
     } catch (error: any) {
       const parsedErrors: ParsedErrors = parseBackendErrors(error);

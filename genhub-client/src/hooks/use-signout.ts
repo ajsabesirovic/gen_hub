@@ -3,10 +3,10 @@ import { useAuth } from "@/contexts/AuthContext";
 
 export function useSignOut() {
   const navigate = useNavigate();
-  const { signOut } = useAuth();
+  const { logout } = useAuth();
 
-  return () => {
-    signOut();
+  return async () => {
+    await logout();
     navigate("/login");
   };
 }

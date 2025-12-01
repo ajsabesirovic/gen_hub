@@ -24,7 +24,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
       >
         <ArrowLeft className="size-4" /> Back
       </Link>
-      <div className="flex w-full max-w-sm flex-col gap-6 px-4 py-8">
+      <div className="flex w-full max-w-sm flex-col gap-6 py-8">
         <Link
           to="/"
           className="flex items-center gap-2 self-center font-medium"
