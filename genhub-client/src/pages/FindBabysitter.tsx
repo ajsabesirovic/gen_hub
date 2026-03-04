@@ -519,7 +519,7 @@ function BabysitterCard({ babysitter, onViewProfile }: BabysitterCardProps) {
   const description = profile?.description || "No bio provided yet.";
   const isVerified = profile?.background_check_status === "verified";
 
-  const rating = profile?.average_rating ?? 0;
+  const rating = Number(profile?.average_rating ?? 0);
   const totalReviews = profile?.total_reviews ?? 0;
 
   return (

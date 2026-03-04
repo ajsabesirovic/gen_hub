@@ -73,7 +73,7 @@ const AGE_GROUPS = [
 
 type Props = {
   user: User;
-  onRefresh: () => Promise<void>;
+  onRefresh: () => Promise<unknown>;
 };
 
 export function ParentProfile({ user, onRefresh }: Props) {

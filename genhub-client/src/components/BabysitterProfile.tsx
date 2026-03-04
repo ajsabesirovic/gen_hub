@@ -77,7 +77,7 @@ const AGE_GROUPS = [
 
 type Props = {
   user: User;
-  onRefresh: () => Promise<void>;
+  onRefresh: () => Promise<unknown>;
 };
 
 export function BabysitterProfile({ user, onRefresh }: Props) {
