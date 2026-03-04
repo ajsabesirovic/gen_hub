@@ -29,11 +29,9 @@ import {
   ExternalLink,
   Filter,
   ArrowUpDown,
-  Star,
   Users,
   Timer,
   Sparkles,
-  BadgeCheck,
 } from "lucide-react";
 import {
   getMyApplications,
@@ -378,7 +376,7 @@ export default function MyApplicationsInvites() {
               <>
                                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold">Task Invitations</h2>
+                    <h2 className="text-2xl font-bold text-left">Task Invitations</h2>
                     <p className="text-sm text-muted-foreground mt-1">
                       Manage and respond to parents who have personally selected
                       you for their needs.
@@ -679,11 +677,6 @@ function InvitationCard({
       .toUpperCase() || "P";
 
     const taskStart = parseISO(task.start);
-  const now = new Date();
-  const hoursUntilStart = Math.max(
-    0,
-    Math.floor((taskStart.getTime() - now.getTime()) / (1000 * 60 * 60)),
-  );
 
     const startTime = format(taskStart, "h:mm a");
   const endTime = task.end ? format(parseISO(task.end), "h:mm a") : null;
@@ -691,10 +684,7 @@ function InvitationCard({
 
     const statusConfig: Record<string, { label: string; className: string }> = {
     pending: {
-      label:
-        hoursUntilStart > 0
-          ? `Expires in ${hoursUntilStart}h`
-          : "Expiring soon",
+      label: "Pending",
       className: "bg-emerald-50 text-emerald-600 border-emerald-200",
     },
     accepted: {
@@ -732,19 +722,6 @@ function InvitationCard({
             </Avatar>
             <div>
               <p className="font-semibold">{parentName}</p>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground mt-0.5">
-                <div className="flex items-center gap-0.5">
-                  <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                  <span>4.9</span>
-                </div>
-                <span>•</span>
-                <span>Reviews</span>
-                <span>•</span>
-                <div className="flex items-center gap-0.5 text-emerald-600">
-                  <BadgeCheck className="h-3 w-3" />
-                  <span>Verified Parent</span>
-                </div>
-              </div>
             </div>
           </div>
           <div className="flex flex-col items-end gap-1">
@@ -762,7 +739,7 @@ function InvitationCard({
 
                 {invitation.message && (
           <div className="mt-4 pl-4 border-l-2 border-emerald-200">
-            <p className="text-sm text-muted-foreground italic">
+            <p className="text-sm text-muted-foreground italic text-left">
               "{invitation.message}"
             </p>
           </div>
