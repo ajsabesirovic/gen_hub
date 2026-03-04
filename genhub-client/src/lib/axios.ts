@@ -1,11 +1,10 @@
-
-import axios, { type AxiosError, type InternalAxiosRequestConfig } from 'axios';
+import axios, { type AxiosError, type InternalAxiosRequestConfig } from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000",
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
@@ -51,23 +50,23 @@ function processQueue(error: Error | null, token: string | null = null) {
 axiosInstance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     const token = getAccessToken();
-    
+
     if (token && config.headers) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-    
+
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 const AUTH_ENDPOINTS = [
-  '/auth/token/refresh/',
-  '/auth/logout/',
-  '/auth/login/',
-  '/auth/registration/',
-  '/auth/password/reset/',
-  '/auth/password/reset/confirm/',
+  "/auth/token/refresh/",
+  "/auth/logout/",
+  "/auth/login/",
+  "/auth/registration/",
+  "/auth/password/reset/",
+  "/auth/password/reset/confirm/",
 ];
 
 function isAuthEndpoint(url: string | undefined): boolean {
@@ -77,10 +76,12 @@ function isAuthEndpoint(url: string | undefined): boolean {
 
 axiosInstance.interceptors.response.use(
   (response) => response,
-  
+
   async (error: AxiosError) => {
-    const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
-    
+    const originalRequest = error.config as InternalAxiosRequestConfig & {
+      _retry?: boolean;
+    };
+
     if (
       !originalRequest ||
       isAuthEndpoint(originalRequest.url) ||
@@ -108,11 +109,11 @@ axiosInstance.interceptors.response.use(
     isRefreshing = true;
 
     try {
-      const response = await axiosInstance.post('/auth/token/refresh/');
+      const response = await axiosInstance.post("/auth/token/refresh/");
       const newAccessToken = response.data.access;
 
       if (!newAccessToken) {
-        throw new Error('No access token in refresh response');
+        throw new Error("No access token in refresh response");
       }
 
       if (accessTokenSetter) {
@@ -124,26 +125,24 @@ axiosInstance.interceptors.response.use(
       if (originalRequest.headers) {
         originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
       }
-      
+
       return axiosInstance(originalRequest);
-      
     } catch (refreshError) {
       processQueue(refreshError as Error, null);
-      
+
       if (accessTokenSetter) {
         accessTokenSetter(null);
       }
-      
+
       if (logoutCallback) {
         logoutCallback();
       }
-      
+
       return Promise.reject(refreshError);
-      
     } finally {
       isRefreshing = false;
     }
-  }
+  },
 );
 
 export default axiosInstance;
