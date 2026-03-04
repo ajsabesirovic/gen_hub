@@ -13,6 +13,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import { toast } from "sonner";
 import { requestPasswordReset } from "@/api/user";
+import { getErrorMessage } from "@/lib/error-utils";
 
 export default function ForgotPasswordForm() {
   const navigate = useNavigate();
@@ -28,12 +29,8 @@ export default function ForgotPasswordForm() {
 
       toast.success("Password reset email sent! Please check your inbox.");
       navigate("/login");
-    } catch (error: any) {
-      const errorMessage =
-        error.response?.data?.message ||
-        error.response?.data?.detail ||
-        "An error occurred. Please try again.";
-      toast.error(errorMessage);
+    } catch (error: unknown) {
+      toast.error(getErrorMessage(error, "Unable to send reset email. Please try again."));
     } finally {
       setIsPending(false);
     }

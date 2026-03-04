@@ -31,10 +31,10 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         >
           <img 
             src="/logo.png" 
-            alt="GenHub Logo" 
+            alt="TrustSit Logo" 
             className="h-8 w-8 object-contain"
           />
-          GenHub
+          TrustSit
         </Link>
         {children}
 

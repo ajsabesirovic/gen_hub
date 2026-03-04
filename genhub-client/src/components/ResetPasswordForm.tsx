@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/ui/password-input";
 import { Loader2, ArrowLeft, AlertCircle } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -140,9 +140,8 @@ export default function ResetPasswordForm({ uid, token }: ResetPasswordFormProps
           )}
 
           <div className="grid gap-2">
-            <Input
+            <PasswordInput
               id="password"
-              type="password"
               placeholder="New Password"
               value={password}
               onChange={(e) => {
@@ -171,9 +170,8 @@ export default function ResetPasswordForm({ uid, token }: ResetPasswordFormProps
           </div>
 
           <div className="grid gap-2">
-            <Input
+            <PasswordInput
               id="confirmPassword"
-              type="password"
               placeholder="Confirm New Password"
               value={confirmPassword}
               onChange={(e) => {

@@ -20,7 +20,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { PasswordInput } from '@/components/ui/password-input';
 import { changePassword } from '@/api/user';
 import { 
   changePasswordSchema, 
@@ -91,10 +91,9 @@ export default function ChangePassword({ noCard = false }: ChangePasswordProps) 
             <FormItem>
               <FormLabel>Current Password</FormLabel>
               <FormControl>
-                <Input 
-                  type="password"
-                  placeholder="Enter your current password" 
-                  {...field} 
+                <PasswordInput
+                  placeholder="Enter your current password"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
@@ -109,10 +108,9 @@ export default function ChangePassword({ noCard = false }: ChangePasswordProps) 
             <FormItem>
               <FormLabel>New Password</FormLabel>
               <FormControl>
-                <Input 
-                  type="password"
-                  placeholder="Enter your new password" 
-                  {...field} 
+                <PasswordInput
+                  placeholder="Enter your new password"
+                  {...field}
                 />
               </FormControl>
               <FormDescription>
@@ -130,10 +128,9 @@ export default function ChangePassword({ noCard = false }: ChangePasswordProps) 
             <FormItem>
               <FormLabel>Confirm New Password</FormLabel>
               <FormControl>
-                <Input 
-                  type="password"
-                  placeholder="Confirm your new password" 
-                  {...field} 
+                <PasswordInput
+                  placeholder="Confirm your new password"
+                  {...field}
                 />
               </FormControl>
               <FormMessage />

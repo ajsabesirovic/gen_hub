@@ -9,29 +9,20 @@ export function ProtectedRoute({ children }: { children: React.ReactNode }) {
     </AuthGuard>
   );
 }
-
-export function AuthenticatedRoute({ children }: { children: React.ReactNode }) {
+export function BabysitterRoute({ children }: { children: React.ReactNode }) {
   return (
     <AuthGuard>
-      {children}
-    </AuthGuard>
-  );
-}
-
-export function VolunteerRoute({ children }: { children: React.ReactNode }) {
-  return (
-    <AuthGuard>
-      <RoleGuard allowed={['volunteer']}>
+      <RoleGuard allowed={['babysitter']}>
           {children}
       </RoleGuard>
     </AuthGuard>
   );
 }
 
-export function SeniorRoute({ children }: { children: React.ReactNode }) {
+export function ParentRoute({ children }: { children: React.ReactNode }) {
   return (
     <AuthGuard>
-      <RoleGuard allowed={['senior']}>
+      <RoleGuard allowed={['parent']}>
           {children}
       </RoleGuard>
     </AuthGuard>

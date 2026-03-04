@@ -1,22 +1,3 @@
-/**
- * Login Form Component
- * ====================
- * 
- * Handles user authentication via username/email and password.
- * 
- * ON SUCCESSFUL LOGIN:
- * 1. Backend returns:
- *    - `access`: Short-lived access token (stored in React memory)
- *    - `user`: User profile data
- *    - HttpOnly cookie: Refresh token (set automatically by browser)
- * 
- * 2. We call `login(access, user)` which stores:
- *    - Access token in React state (memory only, never localStorage)
- *    - User data in React state
- * 
- * 3. The HttpOnly refresh token cookie is handled entirely by the browser
- *    and backend - JavaScript never touches it.
- */
 
 import { Button } from "@/components/ui/button";
 import {
@@ -27,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/ui/password-input";
 import { Loader2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -34,10 +16,11 @@ import type { FormEvent } from "react";
 import { toast } from "sonner";
 import { useAuth } from "@/contexts/AuthContext";
 import axiosInstance from "@/lib/axios";
+import { getErrorMessage } from "@/lib/error-utils";
 
 export default function LoginForm() {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, refreshUser } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isPending, setIsPending] = useState(false);
@@ -47,17 +30,7 @@ export default function LoginForm() {
     setIsPending(true);
 
     try {
-      /**
-       * Login request
-       * 
-       * Backend should return:
-       * - access: JWT access token
-       * - user: User profile data
-       * 
-       * Backend should also set:
-       * - HttpOnly cookie with refresh token (we don't see this in JS)
-       */
-      const response = await axiosInstance.post("/auth/login/", {
+       const response = await axiosInstance.post("/auth/login/", {
         username,
         password,
       });
@@ -65,19 +38,18 @@ export default function LoginForm() {
       const { access, user } = response.data;
 
       login(access, user);
-      
-      if (!user.role) {
+
+            const refreshedUser = await refreshUser();
+
+            if (!user.role && !refreshedUser?.is_staff && !refreshedUser?.is_superuser) {
         navigate("/choose-role");
+      } else if (user.is_staff || user.is_superuser || refreshedUser?.is_staff || refreshedUser?.is_superuser) {
+        navigate("/admin/dashboard");
       } else {
         navigate("/profile");
       }
     } catch (error: unknown) {
-      const err = error as { response?: { data?: { message?: string; detail?: string } } };
-      const errorMessage =
-        err.response?.data?.message ||
-        err.response?.data?.detail ||
-        "An error occurred during login";
-      toast.error(errorMessage);
+      toast.error(getErrorMessage(error, "Unable to sign in. Please check your credentials."));
     } finally {
       setIsPending(false);
     }
@@ -106,9 +78,8 @@ export default function LoginForm() {
           </div>
 
           <div className="grid gap-2">
-            <Input
+            <PasswordInput
               id="password"
-              type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

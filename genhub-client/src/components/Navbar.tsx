@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { UserDropdown } from "./UserDropdown";
 import { useAuth } from "@/contexts/AuthContext";
+import { getProfileImageUrl } from "@/lib/utils";
 
 export default function Navbar() {
   const { user, isLoading } = useAuth();
@@ -14,10 +15,10 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <img 
               src="/logo.png" 
-              alt="GenHub Logo" 
+              alt="TrustSit Logo" 
               className="h-7 w-7 object-contain"
             />
-            <span className="text-xl font-bold">GenHub</span>
+            <span className="text-xl font-bold">TrustSit</span>
           </Link>
           <div className="flex items-center gap-3">
             <ThemeToggle />
@@ -30,10 +31,7 @@ export default function Navbar() {
                     : user?.email.split("@")[0]
                 }
                 email={user.email}
-                image={
-                  user?.image ??
-                  `https://avatar.vercel.sh/${user?.email}`
-                }
+                image={getProfileImageUrl(user?.profile_image, user?.email)}
               />
             ) : (
               <>

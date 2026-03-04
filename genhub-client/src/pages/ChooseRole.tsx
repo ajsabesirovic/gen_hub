@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
-import { HeartHandshake, UserRoundPen, Loader2, Shield } from 'lucide-react';
+import { HeartHandshake, UserRoundPen, Loader2 } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import {
   Card,
@@ -49,21 +49,17 @@ export default function ChooseRole() {
     }
   };
 
-  const handleVolunteerSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleBabysitterSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleRoleSubmit('volunteer');
+    handleRoleSubmit('babysitter');
   };
 
-  const handleSeniorSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleParentSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleRoleSubmit('senior');
+    handleRoleSubmit('parent');
   };
 
-  const handleAdminSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    handleRoleSubmit('admin');
-  };
-
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-background text-foreground px-4">
       <Card className="w-full max-w-2xl bg-card text-card-foreground border-border shadow-lg">
@@ -73,113 +69,78 @@ export default function ChooseRole() {
             Welcome to the Community Platform
           </CardTitle>
           <p className="text-muted-foreground text-sm mt-2 max-w-md">
-            Choose the role that best fits your needs. Whether you want to
-            volunteer or receive help, you're in the right place to begin.
+            Choose the role that best fits your needs. Whether you're looking for
+            childcare services or offering babysitting services, you're in the right place to begin.
           </p>
         </CardHeader>
 
         <Separator className="my-4" />
 
         <CardContent>
-          <Tabs defaultValue="volunteer" className="w-full">
+          <Tabs defaultValue="babysitter" className="w-full">
             <TabsList className="grid w-full grid-cols-3 mb-6 bg-muted">
-              <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
-              <TabsTrigger value="senior">Senior</TabsTrigger>
-              <TabsTrigger value="admin">Admin</TabsTrigger>
+              <TabsTrigger value="babysitter">Babysitter</TabsTrigger>
+              <TabsTrigger value="parent">Parent</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="volunteer">
+            <TabsContent value="babysitter">
               <div className="space-y-4 text-center">
                 <UserRoundPen className="w-8 h-8 mx-auto text-primary" />
-                <h2 className="text-lg font-semibold">Join as a Volunteer</h2>
+                <h2 className="text-lg font-semibold">Join as a Babysitter</h2>
                 <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                  As a volunteer, you play a key role in improving someone's
-                  life. You'll provide help, companionship, and support to
-                  seniors who need assistance with everyday tasks or simply seek
-                  connection. Your time and empathy can bring joy and reduce
-                  isolation for older individuals. It's not just about giving —
-                  it's about building meaningful relationships and learning from
-                  others.
+                  As a babysitter, you play a key role in providing safe and reliable childcare
+                  services. You'll help parents by caring for their children, creating a trusted
+                  connection with families in your community. Your experience, skills, and
+                  dedication make a real difference in children's lives and give parents peace of mind.
                 </p>
-                <form onSubmit={handleVolunteerSubmit}>
+                <form onSubmit={handleBabysitterSubmit}>
                   <Button
                     type="submit"
                     className="mt-4"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting && selectedRole === 'volunteer' ? (
+                    {isSubmitting && selectedRole === 'babysitter' ? (
                       <>
                         <Loader2 className="mr-2 size-4 animate-spin" />
                         Selecting...
                       </>
                     ) : (
-                      'Select Volunteer'
+                      'Select Babysitter'
                     )}
                   </Button>
                 </form>
               </div>
             </TabsContent>
 
-            <TabsContent value="senior">
+            <TabsContent value="parent">
               <div className="space-y-4 text-center">
                 <UserRoundPen className="w-8 h-8 mx-auto text-primary" />
-                <h2 className="text-lg font-semibold">Join as a Senior</h2>
+                <h2 className="text-lg font-semibold">Join as a Parent</h2>
                 <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                  As a senior, this platform offers you a safe and friendly
-                  space to receive support. Whether you need help with errands,
-                  using technology, or just want someone to talk to, volunteers
-                  are here to assist you with care and respect. This is your
-                  opportunity to connect with younger generations, share your
-                  experiences, and stay active in your community.
+                  As a parent, this platform offers you a safe and reliable way to find
+                  qualified babysitters for your children. Whether you need occasional care,
+                  regular childcare, or someone you can trust, our network of experienced
+                  babysitters is here to help. Find the perfect match for your family's needs.
                 </p>
-                <form onSubmit={handleSeniorSubmit}>
+                <form onSubmit={handleParentSubmit}>
                   <Button
                     type="submit"
                     className="mt-4"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting && selectedRole === 'senior' ? (
+                    {isSubmitting && selectedRole === 'parent' ? (
                       <>
                         <Loader2 className="mr-2 size-4 animate-spin" />
                         Selecting...
                       </>
                     ) : (
-                      'Select Senior'
+                      'Select Parent'
                     )}
                   </Button>
                 </form>
               </div>
             </TabsContent>
 
-            <TabsContent value="admin">
-              <div className="space-y-4 text-center">
-                <Shield className="w-8 h-8 mx-auto text-primary" />
-                <h2 className="text-lg font-semibold">Join as an Admin</h2>
-                <p className="text-sm text-muted-foreground max-w-md mx-auto">
-                  As an admin, you have full access to manage the platform,
-                  oversee volunteers and seniors, coordinate tasks, and ensure
-                  the community runs smoothly. You'll be responsible for
-                  maintaining quality, resolving issues, and supporting both
-                  volunteers and seniors in their journey.
-                </p>
-                <form onSubmit={handleAdminSubmit}>
-                  <Button
-                    type="submit"
-                    className="mt-4"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting && selectedRole === 'admin' ? (
-                      <>
-                        <Loader2 className="mr-2 size-4 animate-spin" />
-                        Selecting...
-                      </>
-                    ) : (
-                      'Select Admin'
-                    )}
-                  </Button>
-                </form>
-              </div>
-            </TabsContent>
           </Tabs>
         </CardContent>
 

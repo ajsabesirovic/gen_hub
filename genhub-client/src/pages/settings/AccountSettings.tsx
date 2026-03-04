@@ -98,8 +98,8 @@ export default function AccountSettings() {
                 <SelectValue placeholder="Select your role" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="volunteer">Volunteer</SelectItem>
-                <SelectItem value="senior">Senior</SelectItem>
+                <SelectItem value="babysitter">Babysitter</SelectItem>
+                <SelectItem value="parent">Parent</SelectItem>
                 <SelectItem value="admin">Admin</SelectItem>
                 <SelectItem value="null">None</SelectItem>
               </SelectContent>

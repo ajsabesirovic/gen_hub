@@ -68,7 +68,7 @@ export default function Preferences() {
             <CardTitle>Appearance</CardTitle>
           </div>
           <CardDescription>
-            Customize how GenHub looks and feels
+            Customize how TrustSit looks and feels
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">

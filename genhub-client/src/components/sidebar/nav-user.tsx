@@ -1,9 +1,6 @@
 import {
   IconDotsVertical,
   IconLogout,
-  IconLayoutDashboard,
-  IconUserCircle,
-  IconHome2,
 } from "@tabler/icons-react"
 
 import {
@@ -14,9 +11,7 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
@@ -29,10 +24,13 @@ import {
 import { Link } from "react-router-dom"
 import { useSignOut } from "@/hooks/use-signout"
 import { useAuth } from "@/contexts/AuthContext"
+import { getProfileImageUrl } from "@/lib/utils"
 
 export function NavUser() {
   const { isMobile } = useSidebar()
   const { user } = useAuth();
+
+    const isAdmin = user?.is_staff || user?.is_superuser;
 
   const handleSignOut = useSignOut();
   return (
@@ -46,10 +44,7 @@ export function NavUser() {
           >
             <Avatar className="h-8 w-8 rounded-lg ">
               <AvatarImage
-                src={
-                  user?.image ??
-                  `https://avatar.vercel.sh/${user?.email}`
-                }
+                src={getProfileImageUrl(user?.profile_image, user?.email)}
                 alt={user?.name!}
               />
               <AvatarFallback className="rounded-lg">
@@ -77,56 +72,36 @@ export function NavUser() {
           align="end"
           sideOffset={4}
         >
-          <DropdownMenuLabel className="p-0 font-normal">
-            <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-              <Avatar className="h-8 w-8 rounded-lg">
-                <AvatarImage
-                  src={
-                    user?.image ??
-                    `https://avatar.vercel.sh/${user?.email}`
-                  }
-                  alt={user?.name!}
-                />
-                <AvatarFallback className="rounded-lg">
-                  {user?.name && user?.name.length > 0
-                    ? user?.name?.charAt(0).toUpperCase()
-                    : user?.email?.charAt(0).toUpperCase()}
-                </AvatarFallback>
-              </Avatar>
-              <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">
-                  {user?.name && user?.name.length > 0
-                    ? user?.name
-                    : user?.email.split("@")[0]}
-                </span>
-                <span className="text-muted-foreground truncate text-xs">
-                  {user?.email}
-                </span>
-              </div>
-            </div>
-          </DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem asChild>
-              <Link to="/">
-                <IconHome2 />
-                Home
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link to="/dashboard">
-                <IconLayoutDashboard />
-                Dashboard
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link to="/profile">
-                <IconUserCircle />
-                Profile
-              </Link>
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
+          {!isAdmin && (
+            <>
+              <DropdownMenuItem asChild className="p-0 font-normal cursor-pointer">
+                <Link to="/profile" className="flex items-center gap-2 px-1 py-1.5 text-left text-sm w-full">
+                  <Avatar className="h-8 w-8 rounded-lg">
+                    <AvatarImage
+                      src={getProfileImageUrl(user?.profile_image, user?.email)}
+                      alt={user?.name!}
+                    />
+                    <AvatarFallback className="rounded-lg">
+                      {user?.name && user?.name.length > 0
+                        ? user?.name?.charAt(0).toUpperCase()
+                        : user?.email?.charAt(0).toUpperCase()}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="grid flex-1 text-left text-sm leading-tight">
+                    <span className="truncate font-medium">
+                      {user?.name && user?.name.length > 0
+                        ? user?.name
+                        : user?.email.split("@")[0]}
+                    </span>
+                    <span className="text-muted-foreground truncate text-xs">
+                      {user?.email}
+                    </span>
+                  </div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+            </>
+          )}
           <DropdownMenuItem onClick={() => {
             handleSignOut();
           }}>

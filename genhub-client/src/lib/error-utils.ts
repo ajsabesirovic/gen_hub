@@ -1,11 +1,4 @@
-/**
- * Error response structure from backend can vary:
- * - { new_password1: ["error1", "error2"], new_password2: ["error"] }
- * - { non_field_errors: ["error"] }
- * - { detail: "error message" }
- * - { message: "error message" }
- * - { error: "error message" }
- */
+
 export interface BackendErrorResponse {
   [key: string]: string | string[] | undefined;
   detail?: string;
@@ -18,11 +11,8 @@ export interface ParsedErrors {
   fieldErrors: Record<string, string[]>;
   nonFieldErrors: string[];
   genericError: string | null;
-}
+} 
 
-/**
- * Parses backend error response into structured format
- */
 export function parseBackendErrors(error: any): ParsedErrors {
   const fieldErrors: Record<string, string[]> = {};
   const nonFieldErrors: string[] = [];
@@ -71,12 +61,30 @@ export function parseBackendErrors(error: any): ParsedErrors {
 
   return { fieldErrors, nonFieldErrors, genericError };
 }
-
-/**
- * Gets the first error message for a specific field
- */
+ 
 export function getFieldError(fieldErrors: Record<string, string[]>, fieldName: string): string | null {
   const errors = fieldErrors[fieldName];
   return errors && errors.length > 0 ? errors[0] : null;
+}
+
+export function getErrorMessage(error: unknown, fallback: string = "An error occurred"): string {
+  const parsed = parseBackendErrors(error);
+
+    if (parsed.genericError) {
+    return parsed.genericError;
+  }
+
+  if (parsed.nonFieldErrors.length > 0) {
+    return parsed.nonFieldErrors[0];
+  }
+
+    const fieldErrorKeys = Object.keys(parsed.fieldErrors);
+  if (fieldErrorKeys.length > 0) {
+    const firstField = fieldErrorKeys[0];
+    const fieldLabel = firstField.replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase());
+    return `${fieldLabel}: ${parsed.fieldErrors[firstField][0]}`;
+  }
+
+  return fallback;
 }
 

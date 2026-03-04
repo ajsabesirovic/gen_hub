@@ -4,9 +4,9 @@ import AuthLayout from "@/components/AuthLayout";
 import RegisterForm from "@/components/RegisterForm";
 
 export default function RegisterPage() {
-  const { session } = useAuth();
+  const { isAuthenticated } = useAuth();
 
-  if (session) {
+  if (isAuthenticated) {
     return <Navigate to="/" replace />;
   }
 

@@ -25,8 +25,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-6 md:gap-6 md:py-8 px-6 lg:px-8">
-              {children}
+            <div className="flex flex-col gap-4 py-6 md:gap-6 md:py-8 px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto w-full max-w-[1400px]">
+                {children}
+              </div>
             </div>
           </div>
         </div>

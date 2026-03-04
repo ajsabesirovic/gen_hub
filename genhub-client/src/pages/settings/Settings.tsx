@@ -11,7 +11,6 @@ export default function Settings() {
   return (
     <div className="min-h-screen bg-background py-8 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Header */}
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
@@ -26,7 +25,6 @@ export default function Settings() {
           </div>
         </div>
 
-        {/* Settings Tabs */}
         <Tabs defaultValue="account" className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-6">
             <TabsTrigger value="account" className="flex items-center gap-2">

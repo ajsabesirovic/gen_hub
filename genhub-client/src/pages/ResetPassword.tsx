@@ -4,10 +4,10 @@ import AuthLayout from "@/components/AuthLayout";
 import ResetPasswordForm from "@/components/ResetPasswordForm";
 
 export default function ResetPasswordPage() {
-  const { session } = useAuth();
+  const { isAuthenticated } = useAuth();
   const { uid, token } = useParams<{ uid: string; token: string }>();
 
-  if (session) {
+  if (isAuthenticated) {
     return <Navigate to="/" replace />;
   }
 

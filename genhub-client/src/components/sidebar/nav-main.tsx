@@ -1,64 +1,121 @@
-import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react"
-import { NavLink, useLocation } from "react-router-dom"
+import { IconCirclePlusFilled, type Icon } from "@tabler/icons-react";
+import { ChevronRight, type LucideIcon } from "lucide-react";
+import { NavLink, useLocation } from "react-router-dom";
 
-import { Button } from "@/components/ui/button"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
+} from "@/components/ui/sidebar";
 
-export function NavMain({
-  items,
-}: {
-  items: {
-    title: string
-    url: string
-    icon?: Icon
-  }[]
-}) {
-  const location = useLocation()
+type NavItem = {
+  title: string;
+  url: string;
+  icon?: Icon | LucideIcon;
+  isActive?: boolean;
+};
+
+type NavItemWithChildren = {
+  title: string;
+  icon?: Icon | LucideIcon;
+  isActive?: boolean;
+  items: NavItem[];
+};
+
+type NavConfigItem = NavItem | NavItemWithChildren;
+
+function isNavItemWithChildren(
+  item: NavConfigItem,
+): item is NavItemWithChildren {
+  return "items" in item && Array.isArray(item.items);
+}
+
+export function NavMain({ items }: { items: NavConfigItem[] }) {
+  const location = useLocation();
 
   const isRouteActive = (path: string) => {
     if (path === "/") {
-      return location.pathname === "/"
+      return location.pathname === "/";
     }
-    return location.pathname === path || location.pathname.startsWith(`${path}/`)
-  }
+    return (
+      location.pathname === path || location.pathname.startsWith(`${path}/`)
+    );
+  };
+
+  const isGroupActive = (subitems: NavItem[]) => {
+    return subitems.some((item) => isRouteActive(item.url));
+  };
 
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2">
         <SidebarMenu>
-          <SidebarMenuItem className="flex items-center gap-2">
-            <SidebarMenuButton
-              tooltip="Quick Create"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground min-w-8 duration-200 ease-linear"
-            >
-              <IconCirclePlusFilled />
-              <span>Quick Create</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-        <SidebarMenu>
-          {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton
-                asChild
-                tooltip={item.title}
-                isActive={isRouteActive(item.url)}
-              >
-                <NavLink to={item.url} className="flex items-center gap-2">
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                </NavLink>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ))}
+          {items.map((item) => {
+            if (isNavItemWithChildren(item)) {
+                            return (
+                <Collapsible
+                  key={item.title}
+                  asChild
+                  defaultOpen={isGroupActive(item.items)}
+                  className="group/collapsible"
+                >
+                  <SidebarMenuItem>
+                    <CollapsibleTrigger asChild>
+                      <SidebarMenuButton tooltip={item.title}>
+                        {item.icon && <item.icon />}
+                        <span>{item.title}</span>
+                        <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+                      </SidebarMenuButton>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <SidebarMenuSub>
+                        {item.items.map((subItem) => (
+                          <SidebarMenuSubItem key={subItem.title}>
+                            <SidebarMenuSubButton
+                              asChild
+                              isActive={isRouteActive(subItem.url)}
+                            >
+                              <NavLink to={subItem.url}>
+                                {subItem.icon && <subItem.icon />}
+                                <span>{subItem.title}</span>
+                              </NavLink>
+                            </SidebarMenuSubButton>
+                          </SidebarMenuSubItem>
+                        ))}
+                      </SidebarMenuSub>
+                    </CollapsibleContent>
+                  </SidebarMenuItem>
+                </Collapsible>
+              );
+            }
+
+                        return (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton
+                  asChild
+                  tooltip={item.title}
+                  isActive={isRouteActive(item.url)}
+                >
+                  <NavLink to={item.url} className="flex items-center gap-2">
+                    {item.icon && <item.icon />}
+                    <span>{item.title}</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            );
+          })}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
-  )
+  );
 }

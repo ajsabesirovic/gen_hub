@@ -6,10 +6,7 @@ export interface UseTimerReturn {
   start: (duration?: number) => void;
   reset: () => void;
 }
-
-/**
- * Countdown timer hook used for resend cooldowns
- */
+  
 export function useTimer(initialDuration: number = 0): UseTimerReturn {
   const [timeLeft, setTimeLeft] = useState<number>(initialDuration);
   const [isRunning, setIsRunning] = useState<boolean>(false);

@@ -21,3 +21,11 @@ export async function getNotifications(): Promise<Notification[]> {
   return response.data.results;
 }
 
+export async function markNotificationAsRead(notificationId: string): Promise<Notification> {
+  const response = await axiosInstance.patch<Notification>(
+    `/api/notifications/${notificationId}/`,
+    { is_read: true }
+  );
+  return response.data;
+}
+

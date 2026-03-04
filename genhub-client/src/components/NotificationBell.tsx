@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { Bell, Loader2, CheckCircle2, AlertCircle, Info, XCircle, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,9 +10,11 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { useAuth } from '@/contexts/AuthContext';
-import { getNotifications, type Notification } from '@/api/notifications';
+import { toast } from 'sonner';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
+import { useNotifications } from '@/contexts/NotificationContext';
+import type { Notification } from '@/api/notifications';
 
 const getNotificationIcon = (type: string) => {
   const typeLower = type.toLowerCase();
@@ -31,46 +33,43 @@ const getNotificationIcon = (type: string) => {
 export function NotificationBell() {
   const { user } = useAuth();
   const [open, setOpen] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const unreadCount = notifications.filter((n) => !n.is_read).length;
-
-  const fetchNotifications = useCallback(async () => {
-    if (!user?.id) return;
-
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const data = await getNotifications();
-      setNotifications(data);
-    } catch (err) {
-      setError('Failed to load notifications');
-      console.error('Error fetching notifications:', err);
-    } finally {
-      setIsLoading(false);
-    }
-  }, [user?.id]);
-
-  useEffect(() => {
-    if (user?.id) {
-      fetchNotifications();
-    }
-  }, [user?.id, fetchNotifications]);
+  const {
+    notifications,
+    isLoading,
+    error,
+    unreadCount,
+    fetchNotifications,
+    markNotificationAsRead,
+    clearError,
+  } = useNotifications();
 
   useEffect(() => {
     if (open && user?.id) {
-      fetchNotifications();
+      fetchNotifications(true, true); 
     }
   }, [open, user?.id, fetchNotifications]);
+
+  useEffect(() => {
+    if (!open) {
+      clearError();
+    }
+  }, [open, clearError]);
 
   const formatTime = (dateString: string) => {
     try {
       return formatDistanceToNow(new Date(dateString), { addSuffix: true });
     } catch {
       return dateString;
+    }
+  };
+
+  const handleMarkAsRead = async (notification: Notification) => {
+    if (notification.is_read) return;
+
+    try {
+      await markNotificationAsRead(notification.id);
+    } catch (err) {
+      toast.error('Failed to mark notification as read');
     }
   };
 
@@ -144,10 +143,12 @@ export function NotificationBell() {
               <div className="h-full overflow-y-auto">
                 <div className="divide-y">
                   {notifications.map((notification, index) => (
-                    <div
+                    <button
                       key={notification.id}
+                      type="button"
+                      onClick={() => handleMarkAsRead(notification)}
                       className={cn(
-                        "relative px-6 py-4 transition-all hover:bg-accent/50",
+                        "relative w-full text-left px-6 py-4 transition-all hover:bg-accent/50 cursor-pointer",
                         !notification.is_read && "bg-accent/30",
                         index === 0 && "rounded-t-lg"
                       )}
@@ -180,7 +181,7 @@ export function NotificationBell() {
                       {!notification.is_read && (
                         <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-r" />
                       )}
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>

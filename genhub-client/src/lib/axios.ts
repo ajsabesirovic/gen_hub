@@ -1,30 +1,3 @@
-/**
- * Axios Instance with Token Refresh Logic
- * ========================================
- * 
- * SECURITY ARCHITECTURE:
- * - Access token: Stored ONLY in React memory (useState). This prevents XSS attacks
- *   from stealing long-lived tokens since memory is not accessible via document APIs.
- * - Refresh token: Stored in HttpOnly cookie by the backend. This cookie:
- *   - Cannot be read by JavaScript (prevents XSS theft)
- *   - Is sent automatically with every request when `withCredentials: true`
- *   - Should have SameSite=Lax or Strict to prevent CSRF attacks
- * 
- * HOW TOKEN REFRESH WORKS:
- * 1. Every request includes the access token in Authorization header (if available)
- * 2. If a request returns 401 (Unauthorized):
- *    a. We pause all pending requests
- *    b. Call /auth/token/refresh/ - the HttpOnly cookie is sent automatically
- *    c. Backend validates the refresh token from the cookie
- *    d. If valid, backend returns a new access token (and rotates the refresh cookie)
- *    e. We update the in-memory access token and retry all queued requests
- *    f. If refresh fails, user is logged out
- * 
- * RACE CONDITION PREVENTION:
- * - `isRefreshing` flag prevents multiple simultaneous refresh attempts
- * - `failedRequestsQueue` holds requests that failed during refresh
- * - All queued requests are retried/rejected once refresh completes
- */
 
 import axios, { type AxiosError, type InternalAxiosRequestConfig } from 'axios';
 
@@ -36,11 +9,6 @@ const axiosInstance = axios.create({
   },
 });
 
-/**
- * In-memory access token getter/setter
- * These functions allow axios interceptors to access the React state
- * without creating circular dependencies
- */
 let accessTokenGetter: (() => string | null) | null = null;
 let accessTokenSetter: ((token: string | null) => void) | null = null;
 let logoutCallback: (() => void) | null = null;
@@ -57,9 +25,6 @@ export function setLogoutCallback(callback: () => void) {
   logoutCallback = callback;
 }
 
-/**
- * Get the current access token from React memory
- */
 export function getAccessToken(): string | null {
   return accessTokenGetter ? accessTokenGetter() : null;
 }
@@ -72,9 +37,6 @@ interface QueuedRequest {
 let isRefreshing = false;
 let failedRequestsQueue: QueuedRequest[] = [];
 
-/**
- * Process all queued requests after refresh completes
- */
 function processQueue(error: Error | null, token: string | null = null) {
   failedRequestsQueue.forEach((request) => {
     if (error) {
@@ -86,10 +48,6 @@ function processQueue(error: Error | null, token: string | null = null) {
   failedRequestsQueue = [];
 }
 
-/**
- * Attach access token to every outgoing request
- * The token is read from React memory (not localStorage/cookies)
- */
 axiosInstance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
     const token = getAccessToken();
@@ -103,10 +61,6 @@ axiosInstance.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-/**
- * URLs that should NOT trigger token refresh
- * These are auth-related endpoints that would cause infinite loops
- */
 const AUTH_ENDPOINTS = [
   '/auth/token/refresh/',
   '/auth/logout/',

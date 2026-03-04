@@ -7,12 +7,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/ui/password-input";
 import { Loader2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { toast } from "sonner";
 import axiosInstance from "@/lib/axios";
+import { getErrorMessage } from "@/lib/error-utils";
 
 export default function RegisterForm() {
   const navigate = useNavigate();
@@ -45,12 +47,7 @@ export default function RegisterForm() {
       toast.success("Registration successful! Please verify your email.");
       navigate(`/verify-email?email=${encodeURIComponent(email)}`);
     } catch (error: unknown) {
-      const err = error as { response?: { data?: { message?: string; detail?: string } } };
-      const errorMessage =
-        err.response?.data?.message ||
-        err.response?.data?.detail ||
-        "An error occurred during registration";
-      toast.error(errorMessage);
+      toast.error(getErrorMessage(error, "Unable to create account. Please try again."));
     } finally {
       setIsPending(false);
     }
@@ -103,9 +100,8 @@ export default function RegisterForm() {
           </div>
 
           <div className="grid gap-2">
-            <Input
+            <PasswordInput
               id="password"
-              type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -115,9 +111,8 @@ export default function RegisterForm() {
           </div>
 
           <div className="grid gap-2">
-            <Input
+            <PasswordInput
               id="confirmPassword"
-              type="password"
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
