@@ -54,8 +54,12 @@ export default function Landing() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-xl border bg-card p-6 shadow-md">
-                <div className="h-full w-full rounded-lg bg-gradient-to-br from-primary/20 via-accent/20 to-transparent" />
+              <div className="rounded-xl border bg-card shadow-md overflow-hidden">
+                <img
+                  src="/calendar-preview.png"
+                  alt="TrustSit calendar view"
+                  className="w-full h-auto rounded-xl"
+                />
               </div>
               <div className="absolute -bottom-3 -right-3 rotate-6">
                 <Badge className="px-3 py-1 flex items-center gap-1">

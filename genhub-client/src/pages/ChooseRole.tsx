@@ -78,7 +78,7 @@ export default function ChooseRole() {
 
         <CardContent>
           <Tabs defaultValue="babysitter" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-6 bg-muted">
+            <TabsList className="grid w-full grid-cols-2 mb-6 bg-muted">
               <TabsTrigger value="babysitter">Babysitter</TabsTrigger>
               <TabsTrigger value="parent">Parent</TabsTrigger>
             </TabsList>
