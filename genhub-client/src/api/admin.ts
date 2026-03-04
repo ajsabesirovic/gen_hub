@@ -89,7 +89,7 @@ export async function getAdminUsers(params?: AdminListParams): Promise<{
   previous: string | null;
   results: AdminUser[];
 }> {
-  const response = await axiosInstance.get<any>("/api/users/admin/users/", { params });
+  const response = await axiosInstance.get<any>("/users/admin/users/", { params });
     if (Array.isArray(response.data)) {
     return {
       count: response.data.length,
@@ -102,27 +102,27 @@ export async function getAdminUsers(params?: AdminListParams): Promise<{
 }
 
 export async function getAdminUser(userId: string): Promise<AdminUser> {
-  const response = await axiosInstance.get<AdminUser>(`/api/users/admin/users/${userId}/`);
+  const response = await axiosInstance.get<AdminUser>(`/users/admin/users/${userId}/`);
   return response.data;
 }
 
 export async function updateAdminUser(userId: string, data: Partial<AdminUser>): Promise<AdminUser> {
-  const response = await axiosInstance.patch<AdminUser>(`/api/users/admin/users/${userId}/`, data);
+  const response = await axiosInstance.patch<AdminUser>(`/users/admin/users/${userId}/`, data);
   return response.data;
 }
 
 export async function activateUser(userId: string): Promise<AdminUser> {
-  const response = await axiosInstance.post<AdminUser>(`/api/users/admin/users/${userId}/activate/`);
+  const response = await axiosInstance.post<AdminUser>(`/users/admin/users/${userId}/activate/`);
   return response.data;
 }
 
 export async function deactivateUser(userId: string): Promise<AdminUser> {
-  const response = await axiosInstance.post<AdminUser>(`/api/users/admin/users/${userId}/deactivate/`);
+  const response = await axiosInstance.post<AdminUser>(`/users/admin/users/${userId}/deactivate/`);
   return response.data;
 }
 
 export async function deleteAdminUser(userId: string): Promise<void> {
-  await axiosInstance.delete(`/api/users/admin/users/${userId}/`);
+  await axiosInstance.delete(`/users/admin/users/${userId}/`);
 }
 
 export async function getAdminTasks(params?: TaskListParams): Promise<{
@@ -131,7 +131,7 @@ export async function getAdminTasks(params?: TaskListParams): Promise<{
   previous: string | null;
   results: Task[];
 }> {
-  const response = await axiosInstance.get<any>("/api/tasks/admin/all/", { params });
+  const response = await axiosInstance.get<any>("/tasks/admin/all/", { params });
   if (Array.isArray(response.data)) {
     return {
       count: response.data.length,
@@ -144,12 +144,12 @@ export async function getAdminTasks(params?: TaskListParams): Promise<{
 }
 
 export async function updateAdminTask(taskId: string, data: Partial<Task>): Promise<Task> {
-  const response = await axiosInstance.patch<Task>(`/api/tasks/${taskId}/`, data);
+  const response = await axiosInstance.patch<Task>(`/tasks/${taskId}/`, data);
   return response.data;
 }
 
 export async function deleteAdminTask(taskId: string): Promise<void> {
-  await axiosInstance.delete(`/api/tasks/${taskId}/`);
+  await axiosInstance.delete(`/tasks/${taskId}/`);
 }
 
 export async function getAdminApplications(params?: ApplicationListParams): Promise<{
@@ -158,7 +158,7 @@ export async function getAdminApplications(params?: ApplicationListParams): Prom
   previous: string | null;
   results: TaskApplication[];
 }> {
-  const response = await axiosInstance.get<any>("/api/applications/admin/all/", { params });
+  const response = await axiosInstance.get<any>("/applications/admin/all/", { params });
   if (Array.isArray(response.data)) {
     return {
       count: response.data.length,
@@ -171,7 +171,7 @@ export async function getAdminApplications(params?: ApplicationListParams): Prom
 }
 
 export async function getAdminStatistics(params?: StatisticsParams): Promise<AdminStatistics> {
-  const response = await axiosInstance.get<AdminStatistics>("/api/tasks/statistics/", { params });
+  const response = await axiosInstance.get<AdminStatistics>("/tasks/statistics/", { params });
   return response.data;
 }
 
@@ -185,7 +185,7 @@ export interface CategoryData {
 }
 
 export async function getCategories(): Promise<CategoryData[]> {
-  const response = await axiosInstance.get<any>("/api/categories/");
+  const response = await axiosInstance.get<any>("/categories/");
     if (Array.isArray(response.data)) {
     return response.data;
   }
@@ -196,21 +196,21 @@ export async function getCategories(): Promise<CategoryData[]> {
 }
 
 export async function getCategory(categoryId: string): Promise<CategoryData> {
-  const response = await axiosInstance.get<CategoryData>(`/api/categories/${categoryId}/`);
+  const response = await axiosInstance.get<CategoryData>(`/categories/${categoryId}/`);
   return response.data;
 }
 
 export async function createCategory(data: Omit<CategoryData, 'id' | 'created_at' | 'updated_at'>): Promise<CategoryData> {
-  const response = await axiosInstance.post<CategoryData>("/api/categories/", data);
+  const response = await axiosInstance.post<CategoryData>("/categories/", data);
   return response.data;
 }
 
 export async function updateCategory(categoryId: string, data: Partial<CategoryData>): Promise<CategoryData> {
-  const response = await axiosInstance.patch<CategoryData>(`/api/categories/${categoryId}/`, data);
+  const response = await axiosInstance.patch<CategoryData>(`/categories/${categoryId}/`, data);
   return response.data;
 }
 
 export async function deleteCategory(categoryId: string): Promise<void> {
-  await axiosInstance.delete(`/api/categories/${categoryId}/`);
+  await axiosInstance.delete(`/categories/${categoryId}/`);
 }
 

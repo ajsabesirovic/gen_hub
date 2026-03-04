@@ -200,7 +200,7 @@ export interface AdminStatistics {
 
 
 export async function getParentStatistics(): Promise<ParentStatistics> {
-  const response = await axiosInstance.get<ParentStatistics>("/api/stats/parent/");
+  const response = await axiosInstance.get<ParentStatistics>("/stats/parent/");
   return response.data;
 }
 
@@ -213,14 +213,14 @@ export async function getParentDashboardStatistics(
   range: 7 | 14 | 30 = 7
 ): Promise<ParentDashboardStatistics> {
   const response = await axiosInstance.get<ParentDashboardStatistics>(
-    `/api/stats/parent/dashboard/`,
+    `/stats/parent/dashboard/`,
     { params: { range } }
   );
   return response.data;
 }
 
 export async function getBabysitterStatistics(): Promise<BabysitterStatistics> {
-  const response = await axiosInstance.get<BabysitterStatistics>("/api/stats/babysitter/");
+  const response = await axiosInstance.get<BabysitterStatistics>("/stats/babysitter/");
   return response.data;
 }
 
@@ -233,13 +233,13 @@ export async function getBabysitterDashboardStatistics(
   range: 7 | 14 | 30 = 30
 ): Promise<BabysitterDashboardStatistics> {
   const response = await axiosInstance.get<BabysitterDashboardStatistics>(
-    `/api/stats/babysitter/dashboard/`,
+    `/stats/babysitter/dashboard/`,
     { params: { range } }
   );
   return response.data;
 }
 
 export async function getAdminStats(): Promise<AdminStatistics> {
-  const response = await axiosInstance.get<AdminStatistics>("/api/stats/admin/");
+  const response = await axiosInstance.get<AdminStatistics>("/stats/admin/");
   return response.data;
 }

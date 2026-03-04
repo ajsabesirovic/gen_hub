@@ -16,20 +16,20 @@ export interface CreateTaskData {
 }
 
 export async function getCategories(): Promise<Category[]> {
-  const response = await axiosInstance.get<any>("/api/categories/");
+  const response = await axiosInstance.get<any>("/categories/");
     return Array.isArray(response.data)
     ? response.data
     : response.data?.results || [];
 }
 
 export async function createTask(data: CreateTaskData): Promise<Task> {
-  const response = await axiosInstance.post<Task>("/api/tasks/", data);
+  const response = await axiosInstance.post<Task>("/tasks/", data);
   return response.data;
 }
 
 export async function applyForTask(taskId: string): Promise<TaskApplication> {
   const response = await axiosInstance.post<TaskApplication>(
-    `/api/tasks/${taskId}/apply/`
+    `/tasks/${taskId}/apply/`
   );
   return response.data;
 }
@@ -40,7 +40,7 @@ export async function getMyApplication(
 ): Promise<TaskApplication | { applied: false }> {
   const response = await axiosInstance.get<
     TaskApplication | { applied: false }
-  >(`/api/tasks/${taskId}/my-application/`);
+  >(`/tasks/${taskId}/my-application/`);
   return response.data;
 }
 
@@ -48,7 +48,7 @@ export async function getMyAcceptedTasks(
   segment?: TaskSegment
 ): Promise<Task[]> {
   const params = segment ? { segment } : {};
-  const response = await axiosInstance.get<any>("/api/tasks/volunteer/me/", {
+  const response = await axiosInstance.get<any>("/tasks/volunteer/me/", {
     params,
   });
     return Array.isArray(response.data)
@@ -58,7 +58,7 @@ export async function getMyAcceptedTasks(
 
 export async function getParentTasks(segment?: TaskSegment): Promise<Task[]> {
   const params = segment ? { segment } : {};
-  const response = await axiosInstance.get<any>("/api/tasks/parent/me/", {
+  const response = await axiosInstance.get<any>("/tasks/parent/me/", {
     params,
   });
     return Array.isArray(response.data)
@@ -70,7 +70,7 @@ export async function getTaskApplications(
   taskId: string
 ): Promise<TaskApplication[]> {
   const response = await axiosInstance.get<TaskApplication[]>(
-    `/api/tasks/${taskId}/applications/`
+    `/tasks/${taskId}/applications/`
   );
   return response.data;
 }
@@ -80,7 +80,7 @@ export async function acceptApplication(
   volunteerId: string
 ): Promise<TaskApplication> {
   const response = await axiosInstance.post<TaskApplication>(
-    `/api/tasks/${taskId}/accept/${volunteerId}/`
+    `/tasks/${taskId}/accept/${volunteerId}/`
   );
   return response.data;
 }
@@ -90,7 +90,7 @@ export async function rejectApplication(
   volunteerId: string
 ): Promise<TaskApplication> {
   const response = await axiosInstance.post<TaskApplication>(
-    `/api/tasks/${taskId}/reject/${volunteerId}/`
+    `/tasks/${taskId}/reject/${volunteerId}/`
   );
   return response.data;
 }
@@ -99,13 +99,13 @@ export async function cancelApplication(
   taskId: string
 ): Promise<TaskApplication> {
   const response = await axiosInstance.patch<TaskApplication>(
-    `/api/tasks/${taskId}/cancel-application/`
+    `/tasks/${taskId}/cancel-application/`
   );
   return response.data;
 }
 
 export async function getTaskById(taskId: string): Promise<Task> {
-  const response = await axiosInstance.get<Task>(`/api/tasks/${taskId}/`);
+  const response = await axiosInstance.get<Task>(`/tasks/${taskId}/`);
   return response.data;
 }
 
@@ -114,7 +114,7 @@ export async function getAvailableTasks(params?: {
   location?: string;
   date?: string;
 }): Promise<Task[]> {
-  const response = await axiosInstance.get<Task[]>("/api/tasks/available/", {
+  const response = await axiosInstance.get<Task[]>("/tasks/available/", {
     params,
   });
   return response.data;
@@ -122,7 +122,7 @@ export async function getAvailableTasks(params?: {
 
 export async function completeTask(taskId: string): Promise<Task> {
   const response = await axiosInstance.post<Task>(
-    `/api/tasks/${taskId}/complete/`
+    `/tasks/${taskId}/complete/`
   );
   return response.data;
 }
@@ -132,14 +132,14 @@ export async function updateTask(
   data: Partial<CreateTaskData>
 ): Promise<Task> {
   const response = await axiosInstance.patch<Task>(
-    `/api/tasks/${taskId}/`,
+    `/tasks/${taskId}/`,
     data
   );
   return response.data;
 }
 
 export async function deleteTask(taskId: string): Promise<void> {
-  await axiosInstance.delete(`/api/tasks/${taskId}/`);
+  await axiosInstance.delete(`/tasks/${taskId}/`);
 }
 
 export async function inviteBabysitterToTask(
@@ -148,7 +148,7 @@ export async function inviteBabysitterToTask(
   message?: string
 ): Promise<TaskInvitation> {
   const response = await axiosInstance.post<TaskInvitation>(
-    `/api/tasks/${taskId}/invite/${babysitterId}/`,
+    `/tasks/${taskId}/invite/${babysitterId}/`,
     { message }
   );
   return response.data;
@@ -156,28 +156,28 @@ export async function inviteBabysitterToTask(
 
 export async function getMyApplications(): Promise<TaskApplication[]> {
   const response = await axiosInstance.get<TaskApplication[]>(
-    "/api/tasks/applications/me/"
+    "/tasks/applications/me/"
   );
   return Array.isArray(response.data) ? response.data : [];
 }
 
 export async function getMyInvitations(): Promise<TaskInvitation[]> {
   const response = await axiosInstance.get<TaskInvitation[]>(
-    "/api/tasks/invitations/me/"
+    "/tasks/invitations/me/"
   );
   return Array.isArray(response.data) ? response.data : [];
 }
 
 export async function acceptInvitation(invitationId: string): Promise<TaskInvitation> {
   const response = await axiosInstance.post<TaskInvitation>(
-    `/api/tasks/invitations/${invitationId}/accept/`
+    `/tasks/invitations/${invitationId}/accept/`
   );
   return response.data;
 }
 
 export async function declineInvitation(invitationId: string): Promise<TaskInvitation> {
   const response = await axiosInstance.post<TaskInvitation>(
-    `/api/tasks/invitations/${invitationId}/decline/`
+    `/tasks/invitations/${invitationId}/decline/`
   );
   return response.data;
 }

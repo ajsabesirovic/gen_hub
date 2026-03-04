@@ -114,7 +114,7 @@ export async function updateUserProfile(
 export async function updateUserMeProfile(
   data: UpdateParentProfilePayload | UpdateBabysitterProfilePayload
 ): Promise<User> {
-  const response = await axiosInstance.patch<User>("/api/me/profile/", data);
+  const response = await axiosInstance.patch<User>("/me/profile/", data);
   return response.data;
 }
 
@@ -170,7 +170,7 @@ export async function saveAvailability(
   data: AvailabilityData
 ): Promise<{ detail: string }> {
   const response = await axiosInstance.post<{ detail: string }>(
-    "/api/availability/aggregate/",
+    "/availability/aggregate/",
     data
   );
   return response.data;
@@ -178,7 +178,7 @@ export async function saveAvailability(
 
 export async function getAvailabilityForCurrentUser(): Promise<AvailabilityData | null> {
   try {
-    const response = await axiosInstance.get<AvailabilityData>("/api/availability/aggregate/");
+    const response = await axiosInstance.get<AvailabilityData>("/availability/aggregate/");
     return response.data;
   } catch (error) {
     return null;
@@ -194,7 +194,7 @@ export interface BabysitterListResponse {
 
 export async function getBabysitters(): Promise<User[]> {
   const response = await axiosInstance.get<BabysitterListResponse | User[]>(
-    "/api/users/",
+    "/users/",
     { params: { role: "babysitter" } }
   );
     if (Array.isArray(response.data)) {
@@ -204,12 +204,12 @@ export async function getBabysitters(): Promise<User[]> {
 }
 
 export async function getBabysitterById(id: string): Promise<User> {
-  const response = await axiosInstance.get<User>(`/api/users/${id}/`);
+  const response = await axiosInstance.get<User>(`/users/${id}/`);
   return response.data;
 }
 
 export async function getUserByUsername(username: string): Promise<User> {
-  const response = await axiosInstance.get<User>(`/api/users/by-username/${username}/`);
+  const response = await axiosInstance.get<User>(`/users/by-username/${username}/`);
   return response.data;
 }
 
@@ -241,7 +241,7 @@ export interface ReviewListResponse {
 
 export async function getMyReviews(): Promise<Review[]> {
   const response = await axiosInstance.get<ReviewListResponse | Review[]>(
-    "/api/reviews/"
+    "/reviews/"
   );
     if (Array.isArray(response.data)) {
     return response.data;
@@ -265,7 +265,7 @@ export interface CanReviewResponse {
 }
 
 export async function createReview(data: CreateReviewPayload): Promise<Review> {
-  const response = await axiosInstance.post<Review>("/api/reviews/", data);
+  const response = await axiosInstance.post<Review>("/reviews/", data);
   return response.data;
 }
 
@@ -274,7 +274,7 @@ export async function updateReview(
   data: { rating?: number; comment?: string }
 ): Promise<Review> {
   const response = await axiosInstance.patch<Review>(
-    `/api/reviews/${reviewId}/`,
+    `/reviews/${reviewId}/`,
     data
   );
   return response.data;
@@ -282,7 +282,7 @@ export async function updateReview(
 
 export async function canReviewTask(taskId: string): Promise<CanReviewResponse> {
   const response = await axiosInstance.get<CanReviewResponse>(
-    `/api/reviews/can-review/${taskId}/`
+    `/reviews/can-review/${taskId}/`
   );
   return response.data;
 }
@@ -291,7 +291,7 @@ export async function getReviewsForBabysitter(
   babysitterId: string
 ): Promise<Review[]> {
   const response = await axiosInstance.get<Review[] | ReviewListResponse>(
-    `/api/reviews/babysitter/${babysitterId}/`
+    `/reviews/babysitter/${babysitterId}/`
   );
     if (Array.isArray(response.data)) {
     return response.data;
@@ -324,7 +324,7 @@ export interface Notification {
 
 export async function getNotifications(): Promise<Notification[]> {
   const response = await axiosInstance.get<Notification[] | { results: Notification[] }>(
-    "/api/notifications/"
+    "/notifications/"
   );
   if (Array.isArray(response.data)) {
     return response.data;
@@ -334,14 +334,14 @@ export async function getNotifications(): Promise<Notification[]> {
 
 export async function markNotificationAsRead(id: string): Promise<Notification> {
   const response = await axiosInstance.patch<Notification>(
-    `/api/notifications/${id}/`,
+    `/notifications/${id}/`,
     { is_read: true }
   );
   return response.data;
 }
 
 export async function markAllNotificationsAsRead(): Promise<void> {
-  await axiosInstance.post("/api/notifications/mark-all-read/");
+  await axiosInstance.post("/notifications/mark-all-read/");
 }
 
 import type { Task } from "@/types/task";
@@ -365,7 +365,7 @@ export async function getAvailableTasks(filters?: TaskFilters): Promise<Task[]> 
   if (filters?.location) params.append("location", filters.location);
   if (filters?.date) params.append("date", filters.date);
 
-  const url = `/api/tasks/available/${params.toString() ? `?${params.toString()}` : ""}`;
+  const url = `/tasks/available/${params.toString() ? `?${params.toString()}` : ""}`;
   const response = await axiosInstance.get<TaskListResponse | Task[]>(url);
 
     if (Array.isArray(response.data)) {
@@ -375,6 +375,6 @@ export async function getAvailableTasks(filters?: TaskFilters): Promise<Task[]> 
 }
 
 export async function getTaskById(id: string): Promise<Task> {
-  const response = await axiosInstance.get<Task>(`/api/tasks/${id}/`);
+  const response = await axiosInstance.get<Task>(`/tasks/${id}/`);
   return response.data;
 }

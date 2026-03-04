@@ -17,13 +17,13 @@ export interface PaginatedNotificationsResponse {
 }
 
 export async function getNotifications(): Promise<Notification[]> {
-  const response = await axiosInstance.get<PaginatedNotificationsResponse>(`/api/notifications/`);
+  const response = await axiosInstance.get<PaginatedNotificationsResponse>(`/notifications/`);
   return response.data.results;
 }
 
 export async function markNotificationAsRead(notificationId: string): Promise<Notification> {
   const response = await axiosInstance.patch<Notification>(
-    `/api/notifications/${notificationId}/`,
+    `/notifications/${notificationId}/`,
     { is_read: true }
   );
   return response.data;
